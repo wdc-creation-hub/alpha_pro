@@ -1,0 +1,69 @@
+<!--
+
+## Read the comments and afterwards delete them
+## Now onwards make your other webpages in this folder and follow the directory structure that i made..
+## Please use .html instead of .html, to make symetry with others pages, because almost evryone will be using .html and will be help in making links otherwise if .htm and we put .html in link== it won't work)
+ParaZz
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Add style sheet below-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <!--keep this style sheet below all the sheets to overwrite bootstrap styles-->
+
+
+    <!---Add your scipts below or add below the document to increase load speed-->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="scripts/main.js">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="head-text">Contact Us</h1>
+            <!--decresed size of h1 element for small width, it was very large-->
+            <h4 class="text-center">Be in touch with us.</h4>
+        </div>
+        <div class="row input-container">
+            <form action="" method="">
+                <!--added form tag===when making form it is important to use standard, required for backend purposes-->
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <input name="" type="text" class='' required />
+                        <label>Name</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="styled-input">
+                        <input name="" type="text" class='' required />
+                        <label>Email</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="styled-input">
+                        <input name="" type="text" class='' required />
+                        <!-- carefully use col-(sm,md,lg,xs-n) class of boostrap-->
+                        <label>Phone Number</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <textarea name="" required class=""></textarea>
+                        <label>Message</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 pull-right">
+                    <input type="submit" name="" class="submit-btn" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
