@@ -261,7 +261,7 @@ a:hover {
   top: 0.1px;
   height: 100%;
   overflow-y: scroll;
-  z-index: 999;
+  z-index: 9999999;
   background-color: #310a06; }
   /* line 225, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .mob-nav .nav-item {
