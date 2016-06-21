@@ -1,0 +1,124 @@
+body
+  font-family: sans-serif
+  margin: 0 0 10% 0
+  background-color: #e1efe6
+
+
+header
+  box-shadow: 0px 2px 3px 0.2px #d91a1a
+  width: 100%
+  display: flex
+  background-color: #fff
+
+#logo
+  align-self: center
+  margin-left: 30%
+  margin-right: 30%
+
+.navigation
+  li
+    text-align: center
+    padding-right: 24px
+    padding-left: 24px
+    line-height: 27px
+    display: inline-flex
+    justify-content: flex-end
+  a
+    color: grey
+    text-decoration: none
+    &:hover
+      color: black
+
+
+
+header h3
+  font-size: 25px
+  padding: 3px
+  margin: auto
+  text-align: center
+  border-color: #d91a1a
+  color: #d91a1a
+  line-height: 37px
+
+.forget
+  color: #d91a1a
+  text-align: center
+  text-decoration: none
+  width: 50%
+  margin-left: 29%
+  margin-right: 25%
+
+label
+  cursor: pointer
+
+input
+  &[type="submit"]:hover
+    cursor: pointer
+  font-size: large
+  height: 35px
+  margin-top: 10px
+  transition: all 0.4s ease-in-out
+  width: 100%
+  border: 0
+  border-bottom: 2px solid #222
+  &:focus
+    border-bottom: 2px solid #d91a1a
+    outline: none
+    color: #d91a1a
+
+.forget:hover
+  color: grey
+  text-decoration: blink
+
+.login-form
+  margin: auto
+  width: 50%
+  max-width: 300px
+  margin-top: 35px
+  border-style: solid
+  /*border-top-left-radius: 25px;
+   *border-bottom-right-radius: 25px;
+  border-radius: 50%
+  border-width: thin
+  height: auto
+  border-color: #fff
+  box-shadow: 0px 2px 4px 0.2px #d91a1a
+  padding: 35px
+  background-color: #fff
+
+.navigation ul li + li
+  margin-right: 10px
+  border-bottom: 2px solid #222
+
+input[type="submit"]
+  width: 50%
+  margin-left: 25%
+  margin-right: 25%
+  background-color: #d91a1a
+  border: 0
+  color: #fff
+  font-weight: 600
+  transition: background-color 0.4s ease-in-out
+  &:hover
+    background-color: #fff
+    color: #d91a1a
+    border: 2px solid #d91a1a
+    font-weight: 600
+
+@media screen and (max-width: 584px)
+  #logo
+    display: flex
+    margin-left: 10%
+    margin-right: 10%
+    align-self: center
+  .navigation li
+    width: 100%
+    clear: left
+    margin: 0
+    padding: 0
+    display: flex
+    align-self: center
+  .login-form
+    border-radius: 0
+    border-top-left-radius: 25px
+    border-bottom-right-radius: 25px

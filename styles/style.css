@@ -1,0 +1,73 @@
+                    /*Common rules*/
+
+body {background:#474e5d;}
+
+.wrap{
+    background: #1abc9c;
+    min-width: 250px;
+    }
+
+.top_nav>ul>a   {color: transparent;}
+
+h1
+{
+	color: #ffffff;
+	font-family:monospace;
+}
+
+#register a
+{
+	color: #ffffff;
+	display: block;
+	background: #1abc9c;
+	border: 5px solid transparent;
+	border-radius: 20px;
+	text-align: center;
+}
+.we_p,.for_p,.register_p>p
+{
+	color: black;
+	font-weight: bold italic;
+	font-family: sans-serif;
+}
+.footer  {clear: both;}
+
+.main_body  {overflow: hidden; margin-bottom: 10px}
+
+.follow  #contact,.social>p  {margin-bottom: 15px;}
+
+.follow>p  {margin-top: -10px; }
+
+.follow #contact  {margin-top: 2px;}
+
+.follow p#msg a{
+    font-size: 17px;
+    color: red;    font-family: cursive;    font-weight: bold;
+}
+.follow>p,.social>p{margin-left: 4px;}
+
+.social ul a{
+    float: left;
+    margin-right:10px;    
+}
+.social ul a li  {list-style-position: inside;}
+
+p#place  {background: url(../images/p.png) no-repeat left;}
+p#number  {background: url(../images/c.png) no-repeat left;}
+p#mail  {background: url(../images/m.png) no-repeat left;}
+
+        /*rules for large and medium screens exclusively*/
+
+@media (min-width:501px)
+{
+    .logo_m>img{
+        display: none;
+    }
+    hr
+    {
+	 border: 0; 
+	 height: 2px; 
+	 background-image: linear-gradient(to right,silver,black,silver);
+
+    }
+}
