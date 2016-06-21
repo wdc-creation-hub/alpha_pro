@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -34,7 +35,6 @@
     <link href="styles/main.css" rel="stylesheet" type="text/css">
 	
     <script src="js/jquery-1.12.1.min.js"></script>
-	
    
 </head>
 
@@ -69,46 +69,6 @@
 		</div>
 	</div>
 	<div class="alt-body">
-		 <div class="row">
-            <h1 class="head-text">Contact Us</h1>
-            <h4 class="text-center">Be in touch with us.</h4>
-        </div>
-        <div class="row input-container">
-            <form id="contact" method="post">
-                <div class="col-xs-12">
-                    <div class="styled-input wide">
-                        <input name="name" type="text" class='' required />
-                        <label>Name</label>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                    <div class="styled-input">
-                        <input name="email" type="text" class='' required />
-                        <label>Email</label>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                    <div class="styled-input">
-                        <input name="contact" type="text" class='' required />
-                        <label>Phone Number</label>
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="styled-input wide">
-                        <textarea name="message" required class=""></textarea>
-                        <label>Message</label>
-                    </div>
-                </div>
-				<h5 id="msg" class="text-center"></h5>
-                <div class="col-xs-12 col-md-3 pull-right">
-                    <input type="submit" id="msgsnd" name="submit"  class="submit-btn" value="Send">
-                </div>
-            </form>
-        </div>
-		<div id="aftermsg" style="display:none">
-			<h3 class="text-center">Thankyou! Your Message Was Successfully Sent. <br> We will soon contact You </h3>
-		</div>
-	
 	</div>
 	<div class="cess-footer">
 		<div class="text-center">&copy; 2016 CESS GNDU</div>
@@ -121,41 +81,7 @@
 		$(".head-text").fitText(0.8, { minFontSize: '56px', maxFontSize: '92px' });
 		$("p").fitText(1.3, { minFontSize: '14px', maxFontSize: '30px' });
 		
- 		$('#msgsnd').click(function(e) {
-			e.preventDefault();
-			$data = $('#contact').serialize();
-			$("#msgsnd").val("Sending");
-			$.post('functions/mail.php',$data, request);
-		});
-
-		
-		
-	
-	function request(res) {
-		
-		 if(res===1) {
-	
-		$('#contact').addClass('animated flipOutY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
-              function() {
-					$('#aftermsg').addClass('animated zoomIn').css('display','block');
-				$('#contact').removeClass('animated flipOutY').css('display','none');
-			
-              });
-		 }
-	
-		else {
-		
-		 $("#msg").html(res);
-		   $("#msgsnd").val("Send").addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
-              function() {
-                $('#submit').removeClass('animated shake');
-              });
-		}
-
-		
-
- 	}
-		
+ 		
 		
 		
 	</script>

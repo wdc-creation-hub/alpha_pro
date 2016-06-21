@@ -4,6 +4,8 @@ if(mq.matches) {
      document.getElementsByClassName("styled-input").className = "styled-input wide";
     
 } 
+
+
 $(document).ready(function() {
 					$('a').click(function(e) {
 						e.preventDefault();
@@ -14,6 +16,10 @@ $(document).ready(function() {
 							}
 						setInterval(cessload,1000);
 					});
+	
+		$('#clogo').click(function() {
+			window.location.href('index');
+		})
 	
 	
 			$('.show-news').click(function(e) {
