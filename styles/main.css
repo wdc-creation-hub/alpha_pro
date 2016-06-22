@@ -298,4 +298,30 @@ a:hover {
   font-size: 18px;
   font-weight: 400; }
 
+/* line 254, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+.img-responsive {
+  border: 5px solid #ce3030; }
+
+@media only screen and (max-width: 768px) {
+  /* line 258, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  .anim {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important; } }
+
 /*# sourceMappingURL=main.css.map */
