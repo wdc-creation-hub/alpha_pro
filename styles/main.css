@@ -37,9 +37,11 @@
 /* line 34, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 body {
   background: #ce3030;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  width: 95%;
+  margin: auto; }
 
-/* line 39, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 41, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .main {
   font-family: 'Arvo', serif;
   text-align: center;
@@ -53,7 +55,7 @@ body {
   color: #fff;
   text-shadow: #460e08 16px 2px 0; }
 
-/* line 51, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 53, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 p {
   font-size: 30px;
   color: #fff;
@@ -63,36 +65,36 @@ p {
   text-shadow: #460e08 4px 2px 0; }
 
 @media screen and (max-width: 1080px) {
-  /* line 60, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 62, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .main {
     text-shadow: #460e08 10px 2px 0; } }
 
 @media screen and (max-width: 640px) {
-  /* line 63, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 65, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .main {
     text-shadow: #460e08 7px 2px 0; } }
 
-/* line 66, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 68, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .cess-nav {
   display: flex;
   flex-direction: space-around; }
 
-/* line 69, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 71, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .drop {
   display: none; }
 
 @media screen and (max-width: 1124px) {
-  /* line 72, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 74, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .cess-nav .cess-btn {
     margin: 40px 30px; } }
 
-@media screen and (max-width: 811px) {
-  /* line 79, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+@media screen and (max-width: 1107px) {
+  /* line 81, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .left-nav,
   .right-nav,
   .p2 {
     display: none !important; }
-  /* line 81, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 83, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .drop {
     display: block;
     cursor: pointer;
@@ -101,34 +103,34 @@ p {
     position: absolute;
     top: 10px;
     left: 20px; }
-  /* line 89, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 91, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .main {
     top: 150px; }
-  /* line 91, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 93, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .wrap {
     margin-top: 260px; }
-  /* line 94, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 96, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .logo img {
     position: absolute;
     left: 0; } }
 
 @media screen and (max-width: 600px) {
-  /* line 99, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 101, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .main {
     top: 150px; }
-  /* line 101, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 103, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .wrap {
     margin-top: 120px; }
-  /* line 104, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 106, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .logo img {
     position: static;
     left: 0; } }
 
-/* line 107, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 109, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 a:hover {
   text-decoration: none; }
 
-/* line 109, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 111, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .cess-btn {
   display: flex;
   z-index: 9999;
@@ -145,7 +147,7 @@ a:hover {
   border: 2px solid #fff;
   transition: all 0.6s ease-in-out;
   cursor: pointer; }
-  /* line 125, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 127, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .cess-btn:hover {
     text-decoration: none;
     background-color: white;
@@ -154,41 +156,41 @@ a:hover {
     text-shadow: #460e08 0px 0px 0;
     box-shadow: 0px 2px 10px 2px #310a06; }
 
-/* line 132, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 134, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .cess-o {
   background-color: #ce3030;
   color: #fff; }
 
-/* line 138, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 140, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .show {
   display: block;
   position: static; }
 
-/* line 141, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 143, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .hide {
   display: block;
   position: absolute;
   position: static; }
 
-/* line 145, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 147, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .cess-active {
   background-color: white;
   color: #ce3030;
   text-shadow: #460e08 0px 0px 0;
   box-shadow: 0px 2px 10px 2px #310a06; }
 
-/* line 151, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 153, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .cess-content {
   margin: 4%; }
-  /* line 153, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 155, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .cess-content p {
     text-align: justify; }
 
-/* line 156, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 158, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .p2 {
   display: inline-flex; }
 
-/* line 158, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 160, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .news {
   width: 60%;
   height: auto;
@@ -199,12 +201,12 @@ a:hover {
   background-color: #fff;
   color: #ce3030;
   text-align: center; }
-  /* line 169, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 171, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .news hr {
     background-color: #ce3030;
     height: 2px; }
 
-/* line 172, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 174, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .alt-body {
   background-color: #fff;
   margin: 30px 1%;
@@ -213,36 +215,36 @@ a:hover {
   padding: 5px;
   word-wrap: break-word;
   color: #ce3030 !important; }
-  /* line 182, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 184, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .alt-body h3 {
     color: #8d2116;
     font-weight: 600; }
-  /* line 185, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 187, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .alt-body p {
     color: #ce3030;
     text-shadow: 0 0;
     font-size: 27px !important; }
 
-/* line 189, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 191, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .ion {
   color: #ce3030;
   font-size: 130px; }
 
-@media screen and (max-width: 810px) {
-  /* line 198, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+@media screen and (max-width: 1107px) {
+  /* line 200, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .alt-body {
     margin-top: 120px; } }
 
 @media screen and (max-width: 602px) {
-  /* line 201, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 203, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .alt-body {
     margin-top: 5px !important; } }
 
-/* line 204, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 206, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .toggle {
   display: none; }
 
-/* line 206, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 208, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .block {
   background: #fff;
   color: #ce3030;
@@ -254,28 +256,29 @@ a:hover {
   width: 60%;
   margin: auto; }
 
-/* line 217, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 219, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .mob-nav {
   position: fixed;
-  width: 100%;
+  width: 100% !important;
   top: 0.1px;
+  left: 0;
   height: 100%;
   overflow-y: scroll;
   z-index: 9999999;
   background-color: #310a06; }
-  /* line 225, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 228, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .mob-nav .nav-item {
     color: #fff;
     font-size: 30px;
     display: flex;
     text-align: center;
     flex-direction: column; }
-  /* line 231, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 234, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .mob-nav .nav-item + .nav-item {
     border-bottom: 3px solid #fff;
     padding: 15px; }
 
-/* line 234, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 237, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .cess-footer-o {
   margin: 0;
   background-color: #fff;
@@ -287,7 +290,7 @@ a:hover {
   font-size: 18px;
   font-weight: 400; }
 
-/* line 244, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 247, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .cess-footer {
   margin: 0;
   background-color: #fff;
@@ -298,12 +301,12 @@ a:hover {
   font-size: 18px;
   font-weight: 400; }
 
-/* line 254, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+/* line 257, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
 .img-responsive {
   border: 5px solid #ce3030; }
 
 @media only screen and (max-width: 768px) {
-  /* line 258, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 261, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .anim {
     /*CSS transitions*/
     -o-transition-property: none !important;
