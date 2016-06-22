@@ -10,7 +10,7 @@ $(document).ready(function() {
 					$('a').click(function(e) {
 						e.preventDefault();
 						$url = $(this).attr('href');
-						$('body').addClass('animated flipOutY');
+						$('body').addClass('animated fadeOutLeft');
 						function cessload() {
 							window.location.href=$url;
 							}
