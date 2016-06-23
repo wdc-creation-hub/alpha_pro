@@ -12,17 +12,24 @@ header ("Location: index?err=$msg");
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CESS - Dashboard</title>
+<title>CESS - Report Bug</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/datepicker3.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
-<!--Icons-->
+<script src="js/jquery-1.11.1.min.js"></script>
+
 <script src="js/lumino.glyphs.js"></script>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
 <![endif]-->
+<style>
+	.hid {
+		display: none;
+	}
+	
+</style>
 </head>
 
 <body>
@@ -36,10 +43,6 @@ header ("Location: index?err=$msg");
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand text-center" href="index.php"><span>CESS</span> Room</a>
-				
-					
-						
-	
 			</div>
 							
 		</div>
@@ -53,7 +56,7 @@ header ("Location: index?err=$msg");
 			<li><a href="news"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Add News</a></li>
 			<li><a href="changepass.php"><svg class="glyph stroked lock"><use xlink:href="#stroked-lock"/></svg>Change Password</a></li>
 			<li><a href="logout"><svg class="glyph stroked arrow left"><use xlink:href="#stroked-arrow-left"></use></svg>LogOut</a></li>
-			<li><a href="report"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"/></svg>Report Bug</a></li>
+			<li class="active"><a href="report"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"/></svg>Report Bug</a></li>
 		</ul>
 
 	</div>
@@ -62,42 +65,66 @@ header ("Location: index?err=$msg");
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="index"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+				<li>Report Bug</li>
 			</ol>
 		</div>
-		
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header text-center">Welcome</h1>
-			</div>
-			<p class="text-center">This page is under construction. You can access other features till that time</p>
+			<div class="row">
+				<div class="col-lg-12">
+				
+					<h1 class="page-header"><b>Reort Bug:</b></h1>
+						<div class="panel panel-default">
+					
+				<div class="panel panel-body">
+					<div id="kn" class="alert bg-info hid" role="alert">
+						<span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+					</div>
+				<div  class="col-md-6">
+					<form id="report">
+						<br>
+						<br>
+						<label>Heading</label>
+						<input name="title" class="form-control" type="text">
+						<br>
+						<label>Your Email</label>
+						<input name="email" class="form-control" type="text">
+						<br>
+						<label>Details</label>
+						<textarea id="content" name="content" class="form-control"> </textarea>
+						<br>
+						<div type="submit" class="btn btn-info pull-right" id="send">Send</div>
+					</form>
+
+				</div>
+		</div>
+					</div>
+				</div>
 		</div>
 		
 
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script>
-		$('#calendar').datepicker({
-		});
 
-		!function ($) {
-		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
-		        $(this).find('em:first').toggleClass("glyphicon-minus");      
-		    }); 
-		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
-		}(window.jQuery);
-
-		$(window).on('resize', function () {
-		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
-		})
-		$(window).on('resize', function () {
-		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
-		})
-	</script>	
+		<script src="js/bootstrap.min.js"></script>
+	
+			<script>
+				$(document).ready(function() {
+						$("#send").click(function(e){
+							$(this).text("Posting..Please Wait");
+							var data=$('#report').serialize();
+							$.post('functions/mail_bug.php',data,response);
+							e.preventDefault();
+						})
+						
+						function response(res) {
+							$('#kn').removeClass('hid');
+							$('#response').text(res);
+							$("#send").text("Post");
+							$("#report")[0].reset();
+						}
+						$('.glyphicon-remove').click(function(){
+							$('#kn').addClass('hid');	
+						})
+						
+					})
+			</script>
 </body>
 
 </html>

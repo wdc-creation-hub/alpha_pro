@@ -8,9 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
- 
     <link rel="stylesheet" href="../styles/animate.min.css" type="text/css">
-	<link rel="stylesheet" href="../styles/main.css">	
 	<link rel="stylesheet" href="../styles/grid.css">
 
 	

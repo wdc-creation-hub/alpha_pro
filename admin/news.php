@@ -1,4 +1,3 @@
-	
 <?php
 session_start();
 
@@ -8,7 +7,39 @@ header ("Location: index?err=$msg");
 
 }
 
+require_once('db/connect.php');
 
+
+
+
+
+/*delete event*/
+$dmsg="";
+$dsign="";
+$dalert="";
+if(isset($_GET['del'])) {
+ $delid=$_GET['del'];
+   $dquery="DELETE FROM news WHERE id='$delid'";
+
+   $dresult=$db->query($dquery);
+
+    if ($dresult===true) {
+     $dmsg="Deleted";
+        $dsign="glyphicon glyphicon-ok";
+        $dalert="info";
+        header('Location:news');
+    }
+
+    else {
+        $dmsg="Cannot Delete";
+        $dsign="exclamation-sign";
+        $dalert="danger";
+    }
+}
+
+else {
+
+}
 ?>
 	<!DOCTYPE html>
 	<html>
@@ -16,7 +47,7 @@ header ("Location: index?err=$msg");
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>CESS - ChangePassword</title>
+		<title>CESS - News/Alert</title>
 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/datepicker3.css" rel="stylesheet">
@@ -35,14 +66,21 @@ header ("Location: index?err=$msg");
 			}
 			
 			.alert {
+				margin:15px auto;
 				transition: all 2s ease-in-out !important;
+			}
+			
+			@media screen and (max-width:947px) {
+				#event-create {
+					border:0 !important;
+				}
 			}
 		</style>
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script>
 			tinymce.init({ 
 				selector:'textarea', 
-				height: 00,
+				height: 400,
 				plugins: [
 				  'advlist autolink link image lists charmap  preview hr anchor pagebreak spellchecker',
 				  'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
@@ -141,13 +179,13 @@ header ("Location: index?err=$msg");
 							<use xlink:href="#stroked-table"></use>
 						</svg>Create Event</a>
 				</li>
-				<li>
+				<li  class="active">
 					<a href="news">
 						<svg class="glyph stroked app-window">
 							<use xlink:href="#stroked-app-window"></use>
 						</svg>Add News</a>
 				</li>
-				<li  class="active">
+				<li>
 					<a href="changepass.php">
 						<svg class="glyph stroked lock">
 							<use xlink:href="#stroked-lock" />
@@ -179,43 +217,96 @@ header ("Location: index?err=$msg");
 							</svg>
 						</a>
 					</li>
-					<li class="active">Change Password</li>
+					<li class="active">News</li>
 				</ol>
 			</div>
 
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-12">
 				
-					<h1 class="page-header"><b>Create New Password:</b></h1>
+					<h1 class="page-header"><b>Create News Article Here:</b></h1>
 						<div class="panel panel-default">
 					<div id="kn" class="alert bg-info hid" role="alert">
 						<span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
 					</div>
 				<div class="panel panel-body">
-				<div class="col-md-12">
-					<form id="chng">
-					<input type="password" id='old' name="oldPass" class="form-control" placeholder="Old Password">
-					<br>
-					<input type="password" id='new' name="newpass" class="form-control" placeholder="New password">
-					<br>
-					<input type="submit" class="btn btn-info" id="passc" value="Change Password">
+				<div id="event-create" class="col-md-9" style="border-right:0.4px solid #ada8a8;">
+					<form id="news">
+						<div type="submit" class="btn btn-info pull-right" id="create">Post</div>
+						<br>
+						<br>
+						<label>Title</label>
+						<input name="title" class="form-control" type="text">
+						<br>
+						<div class="btn btn-info" data-toggle="modal" data-target="#picup">
+								Add Photo
+						<input style="display:none" id="picname" name="pname">
+						</div>
+						<br>
+						<br>
+						<textarea id="content" name="content">Write Your Content Here</textarea>
+						<br>
 					</form>
-					</div>
+
+				</div>
+				<div class="col-md-3">
+
+			<div class="panel panel-info"  style="max-height:800px;overflow-y:scroll">
+
+				<div class="panel-heading text-center">Published
+				</div>
+				<div id="update">
+				<div class="panel-body" id="live">
+									<div id="alert" class="alert alert-<?php echo $dalert;?>" aria-hidden="true" role="alert" style="position:absolute">
+						<span class="glyphicon glyphicon-<?php echo $dsign;?>" aria-hidden="true"></span>
+						<span class="sr-only" style="position:relative">  <?php echo $dmsg; ?></span></div>
+						<a href="stats.php"><div class="block">View Stats</div></a><hr>
+					<ul class="list-group">
+						<?php
+                    $sql = "SELECT title,id FROM news ORDER BY id ASC";
+                    $run = $db->query($sql);
+
+                    if ($run->num_rows > 0) {
+
+                        while($row = $run->fetch_assoc()) {
+                            echo"<li class='list-group-item'>".$row['title']."<br><br><a href='?del=".$row['id']."'>Delete</a><a class='pull-right' href='edit_post?edit=".$row['id']."'>Edit</a></li>";
+                        }
+
+                    }
+                    else {
+                        echo "<h5 class='no_event text-center'>No  Latest News Article.. Please Create One</h5>";
+                    }
+
+
+                    $run->free();
+						
+					
+                ?>
+
+
+					</ul>
+					</div>	
+				</div>
+
 				</div>
 			</div>
 		</div>
-	</div>
+
+				
+			</div>
+
+
+			</div>
 			<script src="js/bootstrap.min.js"></script>
 			
 		
 			<script>
 				$(document).ready(function() {
-						$("#passc").click(function(e){
-							$(this).text("Please Wait..");
+						$("#create").click(function(e){
+							$(this).text("Posting..Please Wait");
 						 	tinyMCE.triggerSave();
-							var data=$('#chng').serialize();
-							alert(data);
-							$.post('functions/changepass.php',data,response);
+							var data=$('#news').serialize();
+							$.post('functions/create_news.php',data,response);
 							e.preventDefault();
 						})
 						
@@ -224,8 +315,8 @@ header ("Location: index?err=$msg");
 							$('#response').text(res);
 							
 							$("#create").text("Post");
-							$("#event")[0].reset();
-							$("#update").load('event #live');
+							$("#news")[0].reset();
+							$("#update").load('news #live');
 						}
 						$('.glyphicon-remove').click(function(){
 							$('#kn').addClass('hid');	
@@ -234,6 +325,5 @@ header ("Location: index?err=$msg");
 					})
 			</script>
 	</body>
-</html>
-						
-						
+
+	</html>

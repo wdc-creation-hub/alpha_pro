@@ -1,11 +1,12 @@
 <?php
+session_start();
+if (isset($_SESSION['login'])) {
+$msg="You Need To Login First";
+header ("Location: panel");
+
+}
 require_once('db/connect.php');
 $msg="";
-session_start();
-if ((isset($_SESSION['login']))) {
-header ("Location: panel");
-}
-
 if (isset($_GET['err'])) {
 	$msg=$_GET['err']; 
 }
@@ -30,15 +31,14 @@ if(isset($_POST['auth'])) {
         if ($gain) {
            if ($gain->num_rows > 0) {
 
-            session_start();
+           
             $_SESSION['login'] = "on";
-            $_SESSION['user']=$user;
             header('location:panel');
 
             }
             else {
-            session_start();
-            $_SESSION['login'] = "off";
+           
+          
             $msg= "Invalid Username or Password";
            
             } 
@@ -79,7 +79,7 @@ include 'includes/meta.php';?>
 
 </head>
 <body>
-<!-- #header  -->
+
 	<header>
 		<h3>Admin Login</h3>
 	</header>
@@ -91,8 +91,8 @@ include 'includes/meta.php';?>
 			<span id="logo">
               <img src="img/logo/logo-2.png" height="130px">
 			</span>
-			<input id="ID" type="text" name="user" required placeholder="Username">
-			<input id="Pass" name="pass" type="password" required placeholder="Password">
+			<input id="ID" type="text" name="user" required placeholder="Username" autocomplete="off">
+			<input id="Pass" name="pass" type="password" required placeholder="Password" autocomplete="off">
 			<input type="submit" name="auth" value="Login">
 			<br><br><center><?php echo $msg; ?></center>
 			

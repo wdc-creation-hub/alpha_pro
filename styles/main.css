@@ -301,12 +301,8 @@ a:hover {
   font-size: 18px;
   font-weight: 400; }
 
-/* line 257, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
-.img-responsive {
-  border: 5px solid #ce3030; }
-
 @media only screen and (max-width: 768px) {
-  /* line 261, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
+  /* line 260, C:/xampp/htdocs/creationhub/alpha_pro/styles/main.sass */
   .anim {
     /*CSS transitions*/
     -o-transition-property: none !important;
