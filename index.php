@@ -1,18 +1,11 @@
 <?php include "admin/db/connect.php"; 
 $query="SELECT * FROM event LIMIT 2";
-
-$result = $db->query($query);	
+$queryn="SELECT * FROM news LIMIT 2";
+$result = $db->query($query);
+$resultn = $db->query($queryn);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<?php
+	include 'includes/meta.php'; ?>
 
     <title>CESS | Computer Engineering Student Society</title>
 	
@@ -114,12 +107,12 @@ $result = $db->query($query);
 			
             <div class="row">
 				<?php 
-					if($result->num_rows>0) {
-						while($row = $result->fetch_assoc()) {
+					if($resultn->num_rows>0) {
+						while($row = $resultn->fetch_assoc()) {
 							echo ' <div class="col-sm-6 wow fadeInUp anim"  data-animation-delay="200">';
 							echo '<h3 class="section-heading">'.$row["title"].'</h3>';
-							echo '<div class="sub-title lead3">'. $row["team"].'</div>';
-							echo ' <p class="lead" style="text-align:justify">'.$row["details"].'</p>';
+							echo '<div class="sub-title lead3">'. $row["date"].'</div>';
+							echo ' <p class="lead" style="text-align:justify">'.$row["content"].'</p>';
 							echo '<p><a class="cess-btn cess-o" href="#" role="button">View More</a> </p>';
 							echo '</div>';
 						}

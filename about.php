@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+	include 'includes/meta.php'; ?>
 	<script src="scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
 	<title>About CESS</title>

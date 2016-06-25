@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+	include 'includes/meta.php'; ?>
 	<script src="scripts/jquery.min.js"></script>
 	<title>Contact Us</title>
 	<!-- Bootstrap Core CSS -->
