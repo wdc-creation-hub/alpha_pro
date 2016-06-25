@@ -1,0 +1,284 @@
+
+.loader 
+	position: fixed;
+	left: 0px
+	top: 0px
+	width: 100%
+	height: 100%
+	z-index:-1
+	background: url('../images/logo/logo-1.png') 50% 50% no-repeat rgb(249,249,249)
+	h3
+		position: fixed;
+		text-align:center
+		width: 100%;
+		height: 100%;
+		z-index: 20;
+		top:70%
+		font-family: 'Josefin Sans', sans-serif
+		font-weight:600
+.logo
+	img
+		width:142px
+		height:133px
+		margin-left:auto
+		margin-right:auto
+		position:fixed
+		top:0
+		display:flex
+		justify-content:center
+		border-bottom:2px solid #fff
+		box-shadow:0px 1px 20px 2.2px #310a06
+		border-bottom-right-radius:8%
+		border-bottom-left-radius:8%
+		background-color:#fff
+body
+	background-image:url('../images/bg/img.jpg')
+	background-repeat:none
+	background-attachment:fixed
+	overflow-x:hidden
+	width:95%
+	margin:auto 
+	
+
+.main
+	font-family: 'Arvo', serif
+	text-align:center
+	font-size:492px
+	position:absolute
+	left: 0px
+	top: 100px
+	z-index:-1
+	width: 100%
+	height: 100%
+	color:#fff
+	text-shadow:#460e08 16px 2px 0
+p
+	font-size:30px
+	color:#fff
+	text-align:center
+	font-family: 'Josefin Sans', sans-serif
+	font-weight:600
+	text-shadow:#460e08 4px 2px 0
+					
+@media screen and (max-width:1080px)
+	.main
+		text-shadow:#460e08 10px 2px 0
+@media screen and (max-width:640px)
+	.main
+		text-shadow:#460e08 7px 2px 0
+
+.cess-nav
+	display:flex
+	flex-direction:space-around
+.drop
+	display:none
+.cess-nav
+	.cess-btn
+		@media screen and (max-width:1124px)
+			margin:40px 30px
+	
+@media screen and (max-width:1107px)
+	.left-nav,
+	.right-nav,
+	.p2
+		display:none !important
+	.drop
+		display:block
+		cursor:pointer
+		color:white
+		font-size:60px
+		position:absolute
+		top:10px
+		left:20px
+	.main
+		top:150px
+	.wrap
+		margin-top:260px
+	.logo
+		img
+			position:absolute
+			left:0
+	
+@media screen and (max-width:600px)
+	.main
+		top:150px
+	.wrap
+		margin-top:120px
+	.logo
+		img
+			position:static
+			left:0
+a:hover
+	text-decoration:none
+.cess-btn
+	display:flex
+	z-index:9999
+	margin:40px
+	color:white
+	text-shadow:#460e08 0px 2px 0
+	font-weight:600	
+	font-size:20px
+	text-align:center
+	border:2px solid #fff
+	padding:8px 12px 8px 12px
+	justify-content:center
+	font-family: 'Josefin Sans', sans-serif
+	border:2px solid #fff
+	transition:all 0.6s ease-in-out
+	cursor:pointer
+	&:hover
+		text-decoration:none
+		background-color:white
+		color:#ce3030
+		border-color:#ce3030
+		text-shadow:#460e08 0px 0px 0
+		box-shadow:0px 2px 10px 2px #310a06
+.cess-o
+	background-color:#ce3030
+	color:#fff
+
+
+	
+.show
+	display:block
+	position:static
+.hide
+	display:block
+	position:absolute
+	position:static
+.cess-active
+		background-color:white
+		color:#ce3030
+		text-shadow:#460e08 0px 0px 0
+		box-shadow:0px 2px 10px 2px #310a06
+
+.cess-content
+	margin:4%
+	p
+		text-align:justify
+
+.p2
+	display:inline-flex
+.news
+	width:60%
+	height:auto
+	min-height:150px
+	border:2px solid #310a06
+	box-shadow:0px 2px 10px 2px #310a06
+	margin:auto
+	background-color:#fff
+	color:#ce3030
+	text-align:center
+
+	hr
+		background-color:#ce3030
+		height:2px
+.alt-body
+	background-color:#fff
+	margin:30px 1%
+	box-shadow:0px 1px 5px 1px #310a06
+	//min-height:600px
+	border-radius:2px
+	padding:5px
+	word-wrap:break-word
+	color:#ce3030 !important
+	
+	h3 
+		color:#8d2116
+		font-weight:600
+	h4
+		color:#8d2116
+		font-weight:600
+	p
+		color:#ce3030
+		text-shadow:0 0 
+		font-size:27px !important
+.ion
+	color:#ce3030
+	font-size:130px
+
+
+
+
+
+@media screen and (max-width:1107px) 
+	.alt-body
+		margin-top:120px
+@media screen and (max-width:602px) 
+	.alt-body
+		margin-top:5px !important
+	
+.toggle
+	display:none
+.block
+	background:#fff
+	color:#ce3030
+	text-align:center
+	display:block
+	font-size:20px
+	padding:10px
+	font-weight:600	
+	width:60%
+	margin:auto
+			
+.mob-nav
+	position:fixed
+	width:100% !important
+	top:0.1px
+	left:0
+	height:100%
+	overflow-y:scroll
+	z-index:9999999
+	background-color:#310a06
+	.nav-item
+		color:#fff
+		font-size:30px
+		display:flex
+		text-align:center
+		flex-direction:column
+	.nav-item+.nav-item
+		border-bottom:3px solid #fff		
+		padding:15px
+.cess-footer-o
+	margin:0
+	background-color:#fff
+	color:#ce3030
+	height:auto
+	position:fixed
+	bottom:0
+	width:100%
+	font-size:18px
+	font-weight:400
+.cess-footer
+	margin:0
+	background-color:#fff
+	color:#ce3030
+	box-shadow:0px 1px 5px 1px #310a06
+	height:30px
+	width:100%
+	font-size:18px
+	font-weight:400
+
+
+
+@media only screen and (max-width : 768px) 
+	.anim 
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	

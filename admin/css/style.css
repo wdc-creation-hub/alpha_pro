@@ -1,0 +1,143 @@
+/* line 1, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+body {
+  font-family: sans-serif;
+  margin: 0 0 10% 0;
+  background-color: rgba(73, 164, 230, 0.62) !important; }
+
+/* line 7, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+header {
+  box-shadow: 0px 2px 3px 0.2px #d91a1a;
+  width: 100%;
+  display: flex;
+  background-color: #fff; }
+
+/* line 13, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+#logo {
+  align-self: center;
+  margin-left: 30%;
+  margin-right: 30%; }
+
+/* line 19, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+.navigation li {
+  text-align: center;
+  padding-right: 24px;
+  padding-left: 24px;
+  line-height: 27px;
+  display: inline-flex;
+  justify-content: flex-end; }
+
+/* line 26, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+.navigation a {
+  color: grey;
+  text-decoration: none; }
+  /* line 29, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  .navigation a:hover {
+    color: black; }
+
+/* line 34, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+header h3 {
+  font-size: 25px;
+  padding: 3px;
+  margin: auto;
+  text-align: center;
+  border-color: #d91a1a;
+  color: #d91a1a;
+  line-height: 37px; }
+
+/* line 43, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+.forget {
+  color: #d91a1a;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+  margin-left: 29%;
+  margin-right: 25%; }
+
+/* line 51, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+label {
+  cursor: pointer; }
+
+/* line 54, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+input {
+  font-size: large;
+  height: 35px;
+  margin-top: 10px;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #222; }
+  /* line 55, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  input[type="submit"]:hover {
+    cursor: pointer; }
+  /* line 64, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  input:focus {
+    border-bottom: 2px solid #d91a1a;
+    outline: none;
+    color: #d91a1a; }
+
+/* line 69, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+.forget:hover {
+  color: grey;
+  text-decoration: blink; }
+
+/* line 73, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+.login-form {
+  margin: auto;
+  width: 50%;
+  max-width: 300px;
+  margin-top: 35px;
+  border-style: solid;
+  /*border-top-left-radius: 25px;
+   *border-bottom-right-radius: 25px; */
+  border-radius: 50%;
+  border-width: thin;
+  height: auto;
+  border-color: #fff;
+  box-shadow: 0px 2px 4px 0.2px #d91a1a;
+  padding: 35px;
+  background-color: #fff; }
+
+/* line 89, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+.navigation ul li + li {
+  margin-right: 10px;
+  border-bottom: 2px solid #222; }
+
+/* line 93, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+input[type="submit"] {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: #d91a1a;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.4s ease-in-out; }
+  /* line 102, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  input[type="submit"]:hover {
+    background-color: #fff;
+    color: #d91a1a;
+    border: 2px solid #d91a1a;
+    font-weight: 600; }
+
+@media screen and (max-width: 584px) {
+  /* line 109, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  #logo {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-self: center; }
+  /* line 114, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  .navigation li {
+    width: 100%;
+    clear: left;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-self: center; }
+  /* line 121, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  .login-form {
+    border-radius: 0;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px; } }
+
+/*# sourceMappingURL=style.css.map */
