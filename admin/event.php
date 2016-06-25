@@ -66,7 +66,7 @@ else {
 			}
 			
 			.alert {
-				margin:15px auto;
+				margin: 15px auto;
 				transition: all 2s ease-in-out !important;
 			}
 		</style>
@@ -192,6 +192,12 @@ else {
 						</svg>LogOut</a>
 				</li>
 				<li>
+					<a href="../">
+						<svg class="glyph stroked-app-window">
+							<use xlink:href="#stroked-app-window" />
+						</svg>View Site</a>
+				</li>
+				<li>
 					<a href="report">
 						<svg class="glyph stroked cancel">
 							<use xlink:href="#stroked-cancel" />
@@ -217,61 +223,64 @@ else {
 
 			<div class="row">
 				<div class="col-lg-12">
-				
+
 					<h1 class="page-header"><b>Create Event Here:</b></h1>
-						<div class="panel panel-default">
-					<div id="kn" class="alert bg-info hid" role="alert">
-						<span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-					</div>
-				<div class="panel panel-body">
-				<div id="event-create" class="col-md-6" style="border-right:0.4px solid #ada8a8;">
-					<form id="event">
-						<div type="submit" class="btn btn-info pull-right" id="create">Post</div>
-						<br>
-						<br>
-						<label>Event Title</label>
-						<input name="title" class="form-control" type="text">
-						<br>
-						<label>Team Name</label>
-						<select name="team" class="form-control">
-							<option>Literary</option>
-							<option>Promotion</option>
-							<option>Technical</option>
-							<option>Web Dev Team</option>
-							<option>Fine Arts</option>
-							<option>Fine Arts</option>
-						</select>
-						<br>
-						<label>Start Date</label>
-						<input name="start" class="form-control" type="date" placeholder="Start-Date">
-						<br>
-						<label>End Date</label>
-						<input name="end" class="form-control" type="date" placeholder="End Date">
-						<br>
-						<div class="btn btn-info" data-toggle="modal" data-target="#picup">Add Photo
-							<input style="display:none" id="picname" name="pname">
+					<div class="panel panel-default">
+						<div id="kn" class="alert bg-info hid" role="alert">
+							<span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
 						</div>
-						<br>
-						<br>
-						<textarea id="content" name="content">Event Details</textarea>
-						<br>
-					</form>
+						<div class="panel panel-body">
+							<div id="event-create" class="col-md-6" style="border-right:0.4px solid #ada8a8;">
+								<form id="event">
+									<div type="submit" class="btn btn-info pull-right" id="create">Post</div>
+									<br>
+									<br>
+									<label>Event Title</label>
+									<input name="title" class="form-control" type="text">
+									<br>
+									<label>Team Name</label>
+									<select name="team" class="form-control">
+										<option>Literary</option>
+										<option>Promotion</option>
+										<option>Technical</option>
+										<option>Web Dev Team</option>
+										<option>Fine Arts</option>
+										<option>Fine Arts</option>
+									</select>
+									<br>
+									<label>Start Date</label>
+									<input name="start" class="form-control" type="date" placeholder="Start-Date">
+									<br>
+									<label>End Date</label>
+									<input name="end" class="form-control" type="date" placeholder="End Date">
+									<br>
+									<div class="btn btn-info" data-toggle="modal" data-target="#picup">Add Photo
+										<input style="display:none" id="picname" name="pname">
+									</div>
+									<br>
+									<br>
+									<textarea id="content" name="content">Event Details</textarea>
+									<br>
+								</form>
 
-				</div>
-				<div class="col-md-6">
+							</div>
+							<div class="col-md-6">
 
-			<div class="panel panel-info"  style="max-height:800px;overflow-y:scroll">
+								<div class="panel panel-info" style="max-height:800px;overflow-y:scroll">
 
-				<div class="panel-heading text-center">Published Events
-				</div>
-				<div id="update">
-				<div class="panel-body" id="live">
-									<div id="alert" class="alert alert-<?php echo $dalert;?>" aria-hidden="true" role="alert" style="position:absolute">
-						<span class="glyphicon glyphicon-<?php echo $dsign;?>" aria-hidden="true"></span>
-						<span class="sr-only" style="position:relative">  <?php echo $dmsg; ?></span></div>
-						<a href="stats.php"><div class="block">View Stats</div></a><hr>
-					<ul class="list-group">
-						<?php
+									<div class="panel-heading text-center">Published Events
+									</div>
+									<div id="update">
+										<div class="panel-body" id="live">
+											<div id="alert" class="alert alert-<?php echo $dalert;?>" aria-hidden="true" role="alert" style="position:absolute">
+												<span class="glyphicon glyphicon-<?php echo $dsign;?>" aria-hidden="true"></span>
+												<span class="sr-only" style="position:relative">  <?php echo $dmsg; ?></span></div>
+											<a href="stats.php">
+												<div class="block">View Stats</div>
+											</a>
+											<hr>
+											<ul class="list-group">
+												<?php
                     $sql = "SELECT title,id, startd FROM event ORDER BY id ASC";
                     $run = $db->query($sql);
 
@@ -293,46 +302,46 @@ else {
                 ?>
 
 
-					</ul>
-					</div>	
-				</div>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
 
 				</div>
-			</div>
-		</div>
-
-				
-			</div>
+				<script src="js/bootstrap.min.js"></script>
 
 
-			</div>
-			<script src="js/bootstrap.min.js"></script>
-			
-		
-			<script>
-				$(document).ready(function() {
-						$("#create").click(function(e){
-							$(this).text("Posting..Please Wait");
-						 	tinyMCE.triggerSave();
-							var data=$('#event').serialize();
-							$.post('functions/create_event.php',data,response);
-							e.preventDefault();
-						})
-						
-						function response(res) {
-							$('#kn').removeClass('hid');
-							$('#response').text(res);
+				<script>
+					$(document).ready(function() {
+							$("#create").click(function(e){
+								$(this).text("Posting..Please Wait");
+							 	tinyMCE.triggerSave();
+								var data=$('#event').serialize();
+								$.post('functions/create_event.php',data,response);
+								e.preventDefault();
+							})
 							
-							$("#create").text("Post");
-							$("#event")[0].reset();
-							$("#update").load('event #live');
-						}
-						$('.glyphicon-remove').click(function(){
-							$('#kn').addClass('hid');	
+							function response(res) {
+								$('#kn').removeClass('hid');
+								$('#response').text(res);
+								
+								$("#create").text("Post");
+								$("#event")[0].reset();
+								$("#update").load('event #live');
+							}
+							$('.glyphicon-remove').click(function(){
+								$('#kn').addClass('hid');	
+							})
+							
 						})
-						
-					})
-			</script>
+				</script>
 	</body>
 
 	</html>

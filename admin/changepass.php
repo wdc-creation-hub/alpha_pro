@@ -1,4 +1,3 @@
-	
 <?php
 session_start();
 
@@ -147,7 +146,7 @@ header ("Location: index?err=$msg");
 							<use xlink:href="#stroked-app-window"></use>
 						</svg>Add News</a>
 				</li>
-				<li  class="active">
+				<li class="active">
 					<a href="changepass.php">
 						<svg class="glyph stroked lock">
 							<use xlink:href="#stroked-lock" />
@@ -158,6 +157,12 @@ header ("Location: index?err=$msg");
 						<svg class="glyph stroked arrow left">
 							<use xlink:href="#stroked-arrow-left"></use>
 						</svg>LogOut</a>
+				</li>
+				<li>
+					<a href="../">
+						<svg class="glyph stroked-app-window">
+							<use xlink:href="#stroked-app-window" />
+						</svg>View Site</a>
 				</li>
 				<li>
 					<a href="report">
@@ -185,29 +190,29 @@ header ("Location: index?err=$msg");
 
 			<div class="row">
 				<div class="col-lg-6">
-				
+
 					<h1 class="page-header"><b>Create New Password:</b></h1>
-						<div class="panel panel-default">
-					<div id="kn" class="alert bg-info hid" role="alert">
-						<span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-					</div>
-				<div class="panel panel-body">
-				<div class="col-md-12">
-					<form id="chng">
-					<input type="password" id='old' name="oldPass" class="form-control" placeholder="Old Password">
-					<br>
-					<input type="password" id='new' name="newpass" class="form-control" placeholder="New password">
-					<br>
-					<input type="submit" class="btn btn-info" id="passc" value="Change Password">
-					</form>
+					<div class="panel panel-default">
+						<div id="kn" class="alert bg-info hid" role="alert">
+							<span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+						</div>
+						<div class="panel panel-body">
+							<div class="col-md-12">
+								<form id="chng">
+									<input type="password" id='old' name="oldPass" class="form-control" placeholder="Old Password">
+									<br>
+									<input type="password" id='new' name="newpass" class="form-control" placeholder="New password">
+									<br>
+									<input type="submit" class="btn btn-info" id="passc" value="Change Password">
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 			<script src="js/bootstrap.min.js"></script>
-			
-		
+
+
 			<script>
 				$(document).ready(function() {
 						$("#passc").click(function(e){
@@ -234,6 +239,5 @@ header ("Location: index?err=$msg");
 					})
 			</script>
 	</body>
-</html>
-						
-						
+
+	</html>

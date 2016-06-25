@@ -66,13 +66,13 @@ else {
 			}
 			
 			.alert {
-				margin:15px auto;
+				margin: 15px auto;
 				transition: all 2s ease-in-out !important;
 			}
 			
 			@media screen and (max-width:947px) {
 				#event-create {
-					border:0 !important;
+					border: 0 !important;
 				}
 			}
 		</style>
@@ -179,7 +179,7 @@ else {
 							<use xlink:href="#stroked-table"></use>
 						</svg>Create Event</a>
 				</li>
-				<li  class="active">
+				<li class="active">
 					<a href="news">
 						<svg class="glyph stroked app-window">
 							<use xlink:href="#stroked-app-window"></use>
@@ -196,6 +196,12 @@ else {
 						<svg class="glyph stroked arrow left">
 							<use xlink:href="#stroked-arrow-left"></use>
 						</svg>LogOut</a>
+				</li>
+				<li>
+					<a href="../">
+						<svg class="glyph stroked-app-window">
+							<use xlink:href="#stroked-app-window" />
+						</svg>View Site</a>
 				</li>
 				<li>
 					<a href="report">
@@ -223,46 +229,49 @@ else {
 
 			<div class="row">
 				<div class="col-lg-12">
-				
+
 					<h1 class="page-header"><b>Create News Article Here:</b></h1>
-						<div class="panel panel-default">
-					<div id="kn" class="alert bg-info hid" role="alert">
-						<span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-					</div>
-				<div class="panel panel-body">
-				<div id="event-create" class="col-md-9" style="border-right:0.4px solid #ada8a8;">
-					<form id="news">
-						<div type="submit" class="btn btn-info pull-right" id="create">Post</div>
-						<br>
-						<br>
-						<label>Title</label>
-						<input name="title" class="form-control" type="text">
-						<br>
-						<div class="btn btn-info" data-toggle="modal" data-target="#picup">
-								Add Photo
-						<input style="display:none" id="picname" name="pname">
+					<div class="panel panel-default">
+						<div id="kn" class="alert bg-info hid" role="alert">
+							<span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
 						</div>
-						<br>
-						<br>
-						<textarea id="content" name="content">Write Your Content Here</textarea>
-						<br>
-					</form>
+						<div class="panel panel-body">
+							<div id="event-create" class="col-md-9" style="border-right:0.4px solid #ada8a8;">
+								<form id="news">
+									<div type="submit" class="btn btn-info pull-right" id="create">Post</div>
+									<br>
+									<br>
+									<label>Title</label>
+									<input name="title" class="form-control" type="text">
+									<br>
+									<div class="btn btn-info" data-toggle="modal" data-target="#picup">
+										Add Photo
+										<input style="display:none" id="picname" name="pname">
+									</div>
+									<br>
+									<br>
+									<textarea id="content" name="content">Write Your Content Here</textarea>
+									<br>
+								</form>
 
-				</div>
-				<div class="col-md-3">
+							</div>
+							<div class="col-md-3">
 
-			<div class="panel panel-info"  style="max-height:800px;overflow-y:scroll">
+								<div class="panel panel-info" style="max-height:800px;overflow-y:scroll">
 
-				<div class="panel-heading text-center">Published
-				</div>
-				<div id="update">
-				<div class="panel-body" id="live">
-									<div id="alert" class="alert alert-<?php echo $dalert;?>" aria-hidden="true" role="alert" style="position:absolute">
-						<span class="glyphicon glyphicon-<?php echo $dsign;?>" aria-hidden="true"></span>
-						<span class="sr-only" style="position:relative">  <?php echo $dmsg; ?></span></div>
-						<a href="stats.php"><div class="block">View Stats</div></a><hr>
-					<ul class="list-group">
-						<?php
+									<div class="panel-heading text-center">Published
+									</div>
+									<div id="update">
+										<div class="panel-body" id="live">
+											<div id="alert" class="alert alert-<?php echo $dalert;?>" aria-hidden="true" role="alert" style="position:absolute">
+												<span class="glyphicon glyphicon-<?php echo $dsign;?>" aria-hidden="true"></span>
+												<span class="sr-only" style="position:relative">  <?php echo $dmsg; ?></span></div>
+											<a href="stats.php">
+												<div class="block">View Stats</div>
+											</a>
+											<hr>
+											<ul class="list-group">
+												<?php
                     $sql = "SELECT title,id FROM news ORDER BY id ASC";
                     $run = $db->query($sql);
 
@@ -284,46 +293,46 @@ else {
                 ?>
 
 
-					</ul>
-					</div>	
-				</div>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
 
 				</div>
-			</div>
-		</div>
-
-				
-			</div>
+				<script src="js/bootstrap.min.js"></script>
 
 
-			</div>
-			<script src="js/bootstrap.min.js"></script>
-			
-		
-			<script>
-				$(document).ready(function() {
-						$("#create").click(function(e){
-							$(this).text("Posting..Please Wait");
-						 	tinyMCE.triggerSave();
-							var data=$('#news').serialize();
-							$.post('functions/create_news.php',data,response);
-							e.preventDefault();
-						})
-						
-						function response(res) {
-							$('#kn').removeClass('hid');
-							$('#response').text(res);
+				<script>
+					$(document).ready(function() {
+							$("#create").click(function(e){
+								$(this).text("Posting..Please Wait");
+							 	tinyMCE.triggerSave();
+								var data=$('#news').serialize();
+								$.post('functions/create_news.php',data,response);
+								e.preventDefault();
+							})
 							
-							$("#create").text("Post");
-							$("#news")[0].reset();
-							$("#update").load('news #live');
-						}
-						$('.glyphicon-remove').click(function(){
-							$('#kn').addClass('hid');	
+							function response(res) {
+								$('#kn').removeClass('hid');
+								$('#response').text(res);
+								
+								$("#create").text("Post");
+								$("#news")[0].reset();
+								$("#update").load('news #live');
+							}
+							$('.glyphicon-remove').click(function(){
+								$('#kn').addClass('hid');	
+							})
+							
 						})
-						
-					})
-			</script>
+				</script>
 	</body>
 
 	</html>

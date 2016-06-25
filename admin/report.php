@@ -56,6 +56,7 @@ header ("Location: index?err=$msg");
 			<li><a href="news"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Add News</a></li>
 			<li><a href="changepass.php"><svg class="glyph stroked lock"><use xlink:href="#stroked-lock"/></svg>Change Password</a></li>
 			<li><a href="logout"><svg class="glyph stroked arrow left"><use xlink:href="#stroked-arrow-left"></use></svg>LogOut</a></li>
+			<li><a href="../"><svg class="glyph stroked-app-window"><use xlink:href="#stroked-app-window"/></svg>View Site</a></li>
 			<li class="active"><a href="report"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"/></svg>Report Bug</a></li>
 		</ul>
 
@@ -71,7 +72,7 @@ header ("Location: index?err=$msg");
 			<div class="row">
 				<div class="col-lg-12">
 				
-					<h1 class="page-header"><b>Reort Bug:</b></h1>
+					<h1 class="page-header"><b>Report Bug:</b></h1>
 						<div class="panel panel-default">
 					
 				<div class="panel panel-body">

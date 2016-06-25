@@ -53,6 +53,7 @@ header ("Location: index?err=$msg");
 			<li><a href="news"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Add News</a></li>
 			<li><a href="changepass.php"><svg class="glyph stroked lock"><use xlink:href="#stroked-lock"/></svg>Change Password</a></li>
 			<li><a href="logout"><svg class="glyph stroked arrow left"><use xlink:href="#stroked-arrow-left"></use></svg>LogOut</a></li>
+			<li><a href="../"><svg class="glyph stroked-app-window"><use xlink:href="#stroked-app-window"/></svg>View Site</a></li>
 			<li><a href="report"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"/></svg>Report Bug</a></li>
 		</ul>
 

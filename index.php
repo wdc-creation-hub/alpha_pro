@@ -1,3 +1,8 @@
+<?php include "admin/db/connect.php"; 
+$query="SELECT * FROM event LIMIT 2";
+
+$result = $db->query($query);	
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,32 +61,7 @@
 <body>
 	<div class="loader">
 	</div>
-	<div class="mob-nav toggle">
-		<span class="nav-item close-nav"><span class="ion-close pull-right"></span></span>
-		<a href="activities.html" class="nav-item">Activities</a>
-		<a href="#" class="nav-item">Blog</a>
-		<a href="about.html" class="nav-item">About</a>
-		<a href="teams" class="nav-item">Teams</a>
-		<a href="" class="nav-item">Techno Picks</a>
-		<a href="contact.html" class="nav-item">Contact</a>
-	</div>
-	<div class="cess-nav">
-		<div class="left-nav animated fadeInDown">
-			<a href="events"><h3 class="cess-btn">Activities</h3></a>
-			<a href="about.html"><h3 class="cess-btn">About</h3></a>
-			<a href="#"><h3 class="cess-btn">Blog</h3></a>
-		
-		</div>
-		<div class="drop ion-navicon-round"></div>
-		<div id="clogo" style="z-index:99999" class="logo grid-col grid-col--2-of-18 grid-col--centered grid-col animated fadeInDown">
-			<a href="index.html"><img src="images/logo/logo-1.png"></a>
-		</div>
-		<div class="right-nav animated fadeInDown">
-			<a href="teams.html"><h3 class="cess-btn">Teams</h3></a>
-			<a href=""><h3 class="cess-btn">Techno Picks</h3></a>
-			<a href="contact.html"><h3 class="cess-btn">Contact</h3></a>
-		</div>
-	</div>
+	<?php include 'includes/nav-h.php'; ?>
 	<div class="wrap">
 	<div class="animated flip main anim">CESS</div>
 	<p class="wow fadeInDown"  data-wow-duration="1s" data-wow-delay="0.31s">Its all about you</p>
@@ -98,42 +78,63 @@
 	</div>
 	</div>
 	<div class="alt-body show2" id="act">
+		<h3 class="text-center">Latest Events</h3>
+		 <div id ="useit" class="content-section-a">
+
+        <div class="container">
+			
+            <div class="row">
+				<?php 
+					if($result->num_rows>0) {
+						while($row = $result->fetch_assoc()) {
+							echo ' <div class="col-sm-6 wow fadeInUp anim"  data-animation-delay="200">';
+							echo '<h3 class="section-heading">'.$row["title"].'</h3>';
+							echo '<div class="sub-title lead3">'. $row["team"].'</div>';
+							echo ' <p class="lead" style="text-align:justify">'.$row["details"].'</p>';
+							echo '<p><a class="cess-btn cess-o" href="#" role="button">View More</a> </p>';
+							echo '</div>';
+						}
+					} else {
+						echo '<h4 class="text-center">Nothing Found</h4>';
+					}
+				
+				?>
+            <div class="cess-btn cess-o grid-col grid-col--1-of-1 grid-col--push-7-of-8">View All</div>
+            </div>
+        </div>
+    
+    </div>
+	
+	</div>
+		<div class="alt-body show2" id="act">
 		<h3 class="text-center">Latest Activities</h3>
 		 <div id ="useit" class="content-section-a">
 
         <div class="container">
 			
             <div class="row">
-			
-				<div class="col-sm-6 pull-right wow fadeInRight anim" style="display:flex;justify-content:center">
-                    <img class="img-responsive"  src="" alt="">
-                </div>
+				<?php 
+					if($result->num_rows>0) {
+						while($row = $result->fetch_assoc()) {
+							echo ' <div class="col-sm-6 wow fadeInUp anim"  data-animation-delay="200">';
+							echo '<h3 class="section-heading">'.$row["title"].'</h3>';
+							echo '<div class="sub-title lead3">'. $row["team"].'</div>';
+							echo ' <p class="lead" style="text-align:justify">'.$row["details"].'</p>';
+							echo '<p><a class="cess-btn cess-o" href="#" role="button">View More</a> </p>';
+							echo '</div>';
+						}
+					} else {
+						echo '<h4 class="text-center">Nothing Found</h4>';
+					}
 				
-                <div class="col-sm-6 wow fadeInLeft anim"  data-animation-delay="200">   
-                    <h3 class="section-heading">Event Title</h3>
-					<div class="sub-title lead3">Event By name</div>
-                    <p class="lead" style="text-align:justify">
-						Event Details
-					</p>
-
-					<p><a class="cess-btn cess-o" href="#" role="button">View More</a> </p>
-					
-				</div> 
-				
-                <div class="col-sm-6 wow fadeInRight anim"  data-animation-delay="200">   
-                    <h3 class="section-heading">Event Title</h3>
-					<div class="sub-title lead3">Event By name</div>
-                    <p class="lead" style="text-align:justify">
-						Under Development
-					</p>
-
-					<p><a class="cess-btn cess-o" href="#" role="button">View More</a> </p>
-					
-				</div> 
+				?>
+				 <div class="cess-btn cess-o grid-col grid-col--1-of-1 grid-col--push-7-of-8">View All</div>
             </div>
+            
         </div>
     
-    </div>	
+    </div>
+	
 	</div>
 	</div>
 	<!--<footer>
@@ -161,7 +162,7 @@
     <script src="scripts/jquery.fittext.js"></script>
    
 	<script>
-		$(".main").fitText(0.8, { minFontSize: '56px', maxFontSize: '492px' });
+		$(".main").fitText(0.8, { minFontSize: '56px', maxFontSize: '150px' });
 		$("p").fitText(1.3, { minFontSize: '14px', maxFontSize: '30px' });	
 	</script>
 	<script src="scripts/main.js"></script>
