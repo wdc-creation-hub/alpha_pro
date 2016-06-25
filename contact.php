@@ -31,45 +31,12 @@
 	</script>
 	<link href="styles/set.css" rel="stylesheet" type="text/css">
 	<link href="styles/main.css" rel="stylesheet" type="text/css">
-	
 
+	<script src="js/jquery-1.12.1.min.js"></script>
 </head>
-<style>
-      #map {
-        height: 100% !important;
-      }
-</style>
+
 <body>
-	<script>
-  function CoordMapType(tileSize) {
-        this.tileSize = tileSize;
-      }
-
-      CoordMapType.prototype.getTile = function(coord, zoom, ownerDocument) {
-        var div = ownerDocument.createElement('div');
-        div.innerHTML = coord;
-        div.style.width = this.tileSize.width + 'px';
-        div.style.height = this.tileSize.height + 'px';
-        div.style.fontSize = '10';
-        div.style.borderStyle = 'solid';
-        div.style.borderWidth = '1px';
-        div.style.borderColor = '#AAAAAA';
-        return div;
-      };
-
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: {lat: 41.850, lng: -87.650}
-        });
-
-        // Insert this overlay map type as the first overlay map type at
-        // position 0. Note that all overlay map types appear on top of
-        // their parent base map.
-        map.overlayMapTypes.insertAt(
-            0, new CoordMapType(new google.maps.Size(256, 256)));
-      }
-    </script>
+	
 
 	<div class="loader">
 		<!--<h3>Loading Awesomeness.....</h3>-->
@@ -79,7 +46,8 @@
 			<div class="row input-container">
 				<div class="col-md-6">
 					<h4 class="text-center">Reach us out here</h4>
-					<div id="map"></div>	
+					<!--add map here-->
+
 				</div>
 				<div class="col-md-6">
 					<h4 class="text-center">Be in touch with us.</h4>
@@ -166,8 +134,7 @@
 	
 	 	}
 		</script>
-		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA8l4cuBe8eqse-Dd6-s9JSGPzi3_5Wy9M&callback=initMap"
-    async defer></script>
+
 		<script src="scripts/main.js"></script>
 
 </body>
