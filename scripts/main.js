@@ -27,7 +27,7 @@ $(document).ready(function () {
 	$('.drop').click(function () {
 		$('.mob-nav').addClass('animated slideInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
 			$('.mob-nav').removeClass('animated slideInUp')
-		});;
+		});
 		$('.mob-nav').removeClass('toggle');
 
 
@@ -41,6 +41,16 @@ $(document).ready(function () {
 		});
 
 	});
+});
+
+$(document).ready(function() {
+    $("body").on("contextmenu",function(){
+       return false;
+    }); 
+	
+	 $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+    });
 });
 
 $('.loader').addClass('animated fadeOut');

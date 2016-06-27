@@ -34,11 +34,11 @@
 
       function initMap() {
         var myLatLng = {lat: 31.635481, lng: 74.824355};
-
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 19,
-          navigationControl: true,
-          rotateControl: true,
+          navigationControl: false,
+		  draggable:false,
+          rotateControl: false,
           center: myLatLng,
           scrollwheel: false
         });
@@ -60,6 +60,7 @@
           map: map,
 
         });
+		  
       }
     </script>
     <script async defer
@@ -79,9 +80,7 @@
 				<div class="col-md-6">
 					<h4 class="text-center">Reach us out here</h4>
 					<!--add map here-->
-					<div id="map">
-                    </div>
-
+					<div id="map"></div>
 				</div>
 				<div class="col-md-6">
 					<h4 class="text-center">Be in touch with us.</h4>

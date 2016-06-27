@@ -20,6 +20,8 @@ $resultn = $db->query($queryn);
     <link rel="stylesheet" href="styles/animate.min.css" type="text/css">
 	<link rel="stylesheet" href="styles/main.css">	
 	<link rel="stylesheet" href="styles/grid.css">
+	<link rel="stylesheet" href="styles/owl.carousel.css">
+	<link rel="stylesheet" href="styles/owl.theme.css">
 
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,9 +36,6 @@ $resultn = $db->query($queryn);
 	
 	</script>
 	<style>
-		.alt-body{
-			padding:35px 0px;
-		}
 		
 		.pred {color:#ce3030;
 		text-shadow:0 0; 
@@ -47,6 +46,7 @@ $resultn = $db->query($queryn);
 			position: static;
 			
 		}
+	
 		
 	</style>
 </head>
@@ -56,18 +56,24 @@ $resultn = $db->query($queryn);
 	</div>
 	<?php include 'includes/nav-h.php'; ?>
 	<div class="wrap">
-	<div class="animated flip main anim">CESS</div>
-	<p class="wow fadeInDown"  data-wow-duration="1s" data-wow-delay="0.31s">Its all about you</p>
+	<div class="animated flip big anim">CESS</div>
+	<p class="wow fadeInDown cess-p"  data-wow-duration="1s" data-wow-delay="0.31s">Its all about you</p>
 	
-	<div class="cess-content animated slideInUp anim">
-	<p  class="show1" >Cess is aimed at conducting events that are technical, creative as well as literary which continually helps the students  to brush up their skills in all fields.
+	<div class="cess-content animated slideInUp anim" style="width:100%; margin:30px auto">
+	<div class="grid-col grid-col--6-of-12 grid-col--centered grid-col">
+		<div class="owl-carousel owl-theme">
+			<div><img src="images/cess.jpg"></div>
+			<div><img src="images/main-s.jpg"></div>
+			<div><img src="images/2.JPG"></div>	
+		</div>
+		
+	</div>
+	<div class="grid-col grid-col--6-of-12 grid-col--centered grid-col">
+	<!--<a href="about.html" class="text-center block">You name it and you get it in cess <span class="ion-chevron-right"></span></a>-->
+	<p class="cess-p" style="font-size:13px">Cess is aimed at conducting events that are technical, creative as well as literary which continually helps the students  to brush up their skills in all fields.
 	</p>
-	<a href="about.html" class="text-center block">You name it and you get it in cess <span class="ion-chevron-right"></span></a>
-	
-	
-	
-	<a href="tour.html"><div class="cess-btn grid-col grid-col--8-of-18">Quick Tour</div></a>
-	<div class="cess-btn show-news grid-col grid-col--8-of-18">Latest Activities</div>
+	<a href="tour.html" clickey="slideOutLeft"><div class="cess-btn grid-col grid-col--6-of-12">Quick Tour</div></a>
+	<div class="cess-btn show-news grid-col grid-col--6-of-12">Latest Activities</div>
 	</div>
 	</div>
 	<div class="alt-body show2" id="act">
@@ -92,12 +98,12 @@ $resultn = $db->query($queryn);
 					}
 				
 				?>
-            <div class="cess-btn cess-o grid-col grid-col--1-of-1 grid-col--push-7-of-8">View All</div>
+          
             </div>
         </div>
     
     </div>
-	
+	  <div class="cess-btn cess-o grid-col grid-col--1-of-1 grid-col--push-7-of-8">View All</div>
 	</div>
 		<div class="alt-body show2" id="act">
 		<h3 class="text-center">Latest Activities</h3>
@@ -121,13 +127,13 @@ $resultn = $db->query($queryn);
 					}
 				
 				?>
-				 <div class="cess-btn cess-o grid-col grid-col--1-of-1 grid-col--push-7-of-8">View All</div>
+				
             </div>
             
         </div>
     
     </div>
-	
+	 <div class="cess-btn cess-o grid-col grid-col--1-of-1 grid-col--push-7-of-8">View All</div>
 	</div>
 	</div>
 	<!--<footer>
@@ -153,10 +159,35 @@ $resultn = $db->query($queryn);
 	</div>-->
  	<script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/jquery.fittext.js"></script>
-   
+   <script src="scripts/owl.carousel.js"></script>
 	<script>
-		$(".main").fitText(0.8, { minFontSize: '56px', maxFontSize: '150px' });
-		$("p").fitText(1.3, { minFontSize: '14px', maxFontSize: '30px' });	
+		$(".big").fitText(0.8, { minFontSize: '56px', maxFontSize: '140px' });
+		$("p").fitText(1.3, { minFontSize: '14px', maxFontSize: '30px' });
+		
+		$(document).ready(function(){
+  			$('.owl-carousel').owlCarousel();
+		});
+		
+		var owl = $('.owl-carousel');
+		owl.owlCarousel({
+		 	animateOut: 'fadeOutDown',
+    		animateIn: 'fadeInDown',
+			items:1,
+			dots:true,
+			loop:true,
+			margin:10,
+			autoplay:true,
+			autoplayTimeout:3000,
+			autoplayHoverPause:true
+		});
+		$('.play').on('click',function(){
+			owl.trigger('autoplay.play.owl',[3000])
+		})
+		$('.stop').on('click',function(){
+			owl.trigger('autoplay.stop.owl')
+		})
+		
+		
 	</script>
 	<script src="scripts/main.js"></script>
 </body>

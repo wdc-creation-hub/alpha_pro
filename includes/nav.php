@@ -9,12 +9,12 @@
 </div>
 <div class="cess-nav">
 	<div class="p2 left-nav  animated fadeInDown ">
-		<a href="events"><h3 class="cess-btn">Activities</h3></a>
+		<a href="activities"><h3 class="cess-btn">Activities</h3></a>
 		<a href="about.html"><h3 class="cess-btn">About</h3></a>
 		<a href="#"><h3 class="cess-btn">Blog</h3></a>
 	</div>
 	<div class="drop ion-navicon-round"></div>
-	<div class="logo grid-col grid-col--1-of-12 grid-col--centered grid-col animated fadeInDown">
+	<div class="logo-b grid-col grid-col--1-of-12 grid-col--centered grid-col animated fadeInDown">
 		<a href="index"><img src="images/logo/logo-1.png"></a>
 	</div>
 	<div class="p2 right-nav  animated fadeInDown">
