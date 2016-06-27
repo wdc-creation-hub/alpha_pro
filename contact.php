@@ -4,7 +4,8 @@
 	<title>Contact Us</title>
 	<!-- Bootstrap Core CSS -->
 	<link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
-
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
 	<!-- Custom Fonts -->
 	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -14,8 +15,7 @@
 	<!-- Plugin CSS -->
 	<link rel="stylesheet" href="styles/animate.min.css" type="text/css">
 	<link rel="stylesheet" href="styles/grid.css">
-
-
+    <link rel="stylesheet" href="styles/map.css">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -30,6 +30,41 @@
 	<link href="styles/main.css" rel="stylesheet" type="text/css">
 
 	<script src="js/jquery-1.12.1.min.js"></script>
+	<script>
+
+      function initMap() {
+        var myLatLng = {lat: 31.635481, lng: 74.824355};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 19,
+          navigationControl: true,
+          rotateControl: true,
+          center: myLatLng,
+          scrollwheel: false
+        });
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">'+
+            '<div id="bodyContent">'+
+            
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJMIU2Gnz1ZrpymtUGhfAhH-XOGr-jzg&callback=initMap">
+    </script>
 </head>
 
 <body>
@@ -44,6 +79,8 @@
 				<div class="col-md-6">
 					<h4 class="text-center">Reach us out here</h4>
 					<!--add map here-->
+					<div id="map">
+                    </div>
 
 				</div>
 				<div class="col-md-6">
@@ -88,6 +125,7 @@
 			</div>
 
 		</div>
+		
 
 		<script src="scripts/bootstrap.min.js"></script>
 		<script src="scripts/jquery.fittext.js"></script>

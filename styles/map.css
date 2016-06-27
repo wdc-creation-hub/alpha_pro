@@ -1,0 +1,11 @@
+ html,body{
+        height:auto;
+        }
+
+    #map {
+        height: 350px;
+        width: 90%;
+        padding: 30px 60px 60px 50px;       
+        pointer-events:none;
+        margin: auto;
+        }
