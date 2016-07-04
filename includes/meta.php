@@ -16,13 +16,6 @@
 
 Developed By Team Alpha At CESS-WDC.
 
-
-
-Team Members:
-	1. Arnav
-	2. Namarta
-	3. Nitin
-	4. Sanyam
 -->
 
 <!DOCTYPE html>
@@ -58,3 +51,4 @@ Team Members:
 	<meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
 	<meta name="msapplication-config" content="icons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+	

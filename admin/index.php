@@ -33,6 +33,7 @@ if(isset($_POST['auth'])) {
 
            
             $_SESSION['login'] = "on";
+		   	$_SESSION['user'] = $user;
             header('location:panel');
 
             }
@@ -72,9 +73,7 @@ include 'includes/meta.php';?>
 	</title>
 	<link rel="stylesheet" href="css/style.css">
 	<style>
-		body {
-			background: #ce3030;
-		}
+		
 </style>
 
 </head>

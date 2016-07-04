@@ -2,17 +2,17 @@
 	include 'includes/meta.php'; ?>
 	<script src="scripts/jquery.min.js"></script>
 	<title>Contact Us</title>
-	<!-- Bootstrap Core CSS -->
+
 	<link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-	<!-- Custom Fonts -->
+
 	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-	<!-- Plugin CSS -->
+	
 	<link rel="stylesheet" href="styles/animate.min.css" type="text/css">
 	<link rel="stylesheet" href="styles/grid.css">
     <link rel="stylesheet" href="styles/map.css">
@@ -72,14 +72,14 @@
 	
 
 	<div class="loader">
-		<!--<h3>Loading Awesomeness.....</h3>-->
+		
 	</div>
 	<?php include 'includes/nav.php'; ?>
 		<div class="alt-body">
 			<div class="row input-container">
 				<div class="col-md-6">
 					<h4 class="text-center">Reach us out here</h4>
-					<!--add map here-->
+					
 					<div id="map"></div>
 				</div>
 				<div class="col-md-6">
@@ -115,6 +115,7 @@
 							<input type="submit" id="msgsnd" name="submit" class="submit-btn" value="Send">
 						</div>
 					</form>
+					
 					<br>
 					<br>
 				</div>
@@ -124,7 +125,7 @@
 			</div>
 
 		</div>
-		
+		<?php include 'includes/footer.php'; ?>
 
 		<script src="scripts/bootstrap.min.js"></script>
 		<script src="scripts/jquery.fittext.js"></script>

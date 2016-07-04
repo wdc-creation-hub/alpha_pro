@@ -141,10 +141,10 @@ header ("Location: index?err=$msg");
 						</svg>Create Event</a>
 				</li>
 				<li>
-					<a href="news">
+					<a href="activities">
 						<svg class="glyph stroked app-window">
 							<use xlink:href="#stroked-app-window"></use>
-						</svg>Add News</a>
+						</svg>Add Activities</a>
 				</li>
 				<li class="active">
 					<a href="changepass.php">
@@ -219,7 +219,7 @@ header ("Location: index?err=$msg");
 							$(this).text("Please Wait..");
 						 	tinyMCE.triggerSave();
 							var data=$('#chng').serialize();
-							alert(data);
+							
 							$.post('functions/changepass.php',data,response);
 							e.preventDefault();
 						})
@@ -229,7 +229,7 @@ header ("Location: index?err=$msg");
 							$('#response').text(res);
 							
 							$("#create").text("Post");
-							$("#event")[0].reset();
+							$("#chng")[0].reset();
 							$("#update").load('event #live');
 						}
 						$('.glyphicon-remove').click(function(){

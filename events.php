@@ -1,7 +1,7 @@
 <?php
 	require ('admin/db/connect.php');
 	
-	$query = "SELECT * FROM news";
+	$query = "SELECT * FROM event";
 	$result = $db->query($query);
 
 	include 'includes/meta.php'; ?>
@@ -74,16 +74,16 @@
 			
 		</div>
 		<div class="container-fluid">
-			<h1 class="cess-p" style="font-size:33px">Recent Activities</h1>
+			<h1 class="cess-p" style="font-size:33px">Latest Events</h1>
 			<div class="alt-body" style="padding:10px">
 				<div class="owl-carousel">
 					<?php 
 						if($result->num_rows) {
 							while($row =$result->fetch_assoc()) {
 								?>
-						<div class="act-con over" data-load="activities-view?id=<?php echo $row['id'];?>">
+						<div class="act-con over" data-load="event-view?id=<?php echo $row['id'];?>">
 							<div class="div-overlay">
-								<span class="inner-lay ion-ios-book"> Read</span>
+								<span class="inner-lay ion-ios-book"> More</span>
 							</div>
 							<img src="admin/images/cessup/<?php echo $row['image'];?>">
 							<p class="caption"><?php echo $row['title'];?></p>
@@ -94,7 +94,7 @@
 						}
 					
 					else {
-						echo "No recent Activities"; 
+						echo "<h5 class='text-center'>No Latest Events</h5>"; 
 					}
 					$db->close();
 					?>
@@ -103,22 +103,22 @@
 				</div>
 			</div>
 			<div style="margin:auto;margin-bottom:20px;self-align:center">
-				<h1 class="cess-p" style="font-size:33px">All Activities</h1>
+				<h1 class="cess-p" style="font-size:33px">All Events</h1>
 				
 				<?php 
 				require('admin/db/connect.php');
-				$query = "SELECT * FROM news";
+				$query = "SELECT * FROM event";
 				$result = $db->query($query);
 						if($result->num_rows) {
 							while($row =$result->fetch_assoc()) {
 				?>
 				
-				<div class="alt-body over col-md-4 thumbnail" data-load="activities-view?id=<?php echo $row['id']; ?>">
+				<div class="alt-body over col-md-4 thumbnail" data-load="event-view?id=<?php echo $row['id'];?>">
 					<div class="div-overlay">
-						<span class="inner-lay ion-ios-book"> Read</span>
+						<span class="inner-lay ion-ios-book"> More</span>
 					
 					</div>
-					<p class="wow tada text-center ion-calendar"><?php echo date("d M",strtotime($row['date']));?></p>
+					<p class="wow tada text-center ion-calendar"> <?php echo date("d M",strtotime($row['startd']));?> - <?php echo date("d M",strtotime($row['endd']));?></p>
 					<img src="admin/images/cessup/<?php echo $row['image'];?>" class="img-responsive" style="padding:10px;height:300px">
 					<p class="text-center"><?php echo $row['title'];?></p>
 				

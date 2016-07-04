@@ -117,11 +117,11 @@
 		
 		<div class="container">
             <div class="row">
-                <div class="col-sm-6 wow fadeInLeftBig anim">
+                <div class="col-sm-5 wow fadeInLeftBig anim">
                      <img  class="img-responsive img-rounded" src="images/2.jpg" alt="">
 				</div>
 				
-                <div class="col-sm-6 wow fadeInRightBig anim"  data-animation-delay="200">   
+                <div class="col-sm-offset-6 wow fadeInRightBig anim"  data-animation-delay="200">   
                     <h3 class="section-heading">Our teams</h3>
 					<div class="sub-title lead3">Our Society has been divided up into teams that work in coordination with each other</div>
                     <p class="lead" style="text-align:left">
@@ -142,7 +142,7 @@
 
              <div class="row">
 			 
-				<div class="col-sm-6 pull-right wow fadeInRightBig anim">
+				<div class="col-sm-5 pull-right wow fadeInRightBig anim">
                     <img class="img-responsive " src="images/doge.JPG" alt="">
                 </div>
 			 
@@ -163,6 +163,8 @@
 	
 	</div>
 	</div>
+	<br>
+	<?php include 'includes/footer.php'; ?>
 <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/jquery.fittext.js"></script>
    

@@ -22,14 +22,14 @@
 		  opacity:0.18;
 		  background: url("images/logo/logo-1.png") 50% 50% no-repeat #f9f9f9; }
 /* line 10, C:/xampp/htdocs/creationhub/alpha_pro_f/styles/main.sass */
-	 h3 {
+	 h4 {
 		    position: absolute;
 		    text-align: center;
 		    width: 100%;
 		    height: 100%;
 		    z-index: 20;
 		    top: 75%;
-		    font-size:35px;
+		    font-size:25px;
 		    font-family: 'Satisfy', cursive;
 		    font-weight: 800;
 		    color:white;
@@ -50,7 +50,7 @@
 	<div class="loader">
 		
 	</div>
-	<h3 class="animated zoomIn">This is Page is under Construction!<br><div data-load="index">GO to home</a></h3>
+	<h4 class="animated zoomIn">We Are making it more awesome! Come Back After Sometime.<div data-load="index">GO to home</a></h4>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
 	<script>
 	$.fn.extend({

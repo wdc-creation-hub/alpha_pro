@@ -17,7 +17,7 @@ require_once('../db/connect.php');
     $title = addslashes($_POST['title']);
  	$team = addslashes($_POST['team']);
     $content= nl2br(addslashes($_POST['content']));
-	$start = addslashes($_POST['team']);
+	$start = addslashes($_POST['start']);
     $end= addslashes($_POST['end']);
   	$image =  addslashes($_POST['pname']);
 

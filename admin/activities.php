@@ -19,7 +19,7 @@ $dsign="";
 $dalert="";
 if(isset($_GET['del'])) {
  $delid=$_GET['del'];
-   $dquery="DELETE FROM event WHERE id='$delid'";
+   $dquery="DELETE FROM news WHERE id='$delid'";
 
    $dresult=$db->query($dquery);
 
@@ -27,7 +27,7 @@ if(isset($_GET['del'])) {
      $dmsg="Deleted";
         $dsign="glyphicon glyphicon-ok";
         $dalert="info";
-        header('Location:event');
+        header('Location:activities');
     }
 
     else {
@@ -47,7 +47,7 @@ else {
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>CESS - Create Event</title>
+		<title>CESS - News/Alert</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/datepicker3.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
@@ -58,6 +58,9 @@ else {
 <script src="js/respond.min.js"></script>
 <![endif]-->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
+			<script src="js/jquery-1.11.1.min.js"></script>
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
 		<style>
 			.hid {
 				display: none;
@@ -67,10 +70,14 @@ else {
 				margin: 15px auto;
 				transition: all 2s ease-in-out !important;
 			}
+			
+			@media screen and (max-width:947px) {
+				#event-create {
+					border: 0 !important;
+				}
+			}
 		</style>
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
+	
 		<script type="text/javascript">
 			$(document).ready(function (e) {
 				$("#uploadForm").on('submit', (function (e) {
@@ -137,13 +144,13 @@ else {
 			<br>
 			<br>
 			<ul class="nav menu">
-				<li class="active">
+				<li>
 					<a href="event">
 						<svg class="glyph stroked table">
 							<use xlink:href="#stroked-table"></use>
 						</svg>Create Event</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="activities">
 						<svg class="glyph stroked app-window">
 							<use xlink:href="#stroked-app-window"></use>
@@ -182,71 +189,52 @@ else {
 							</svg>
 						</a>
 					</li>
-					<li class="active">Events</li>
+					<li class="active">Activities</li>
 				</ol>
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<h1 class="page-header"><b>Create Event Here:</b></h1>
+					<h1 class="page-header"><b>Create News Article Here:</b></h1>
 					<div class="panel panel-default">
 						<div id="kn" class="alert bg-info hid" role="alert"> <span id="response"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a> </div>
 						<div class="panel panel-body">
 							<div id="event-create" class="col-md-9" style="border-right:0.4px solid #ada8a8;">
-								<form id="event">
+								<form id="news">
 									<div type="submit" class="btn btn-info pull-right" id="create">Post</div>
 									<br>
 									<br>
-									<label>Event Title</label>
+									<label>Title</label>
 									<input name="title" class="form-control" type="text">
 									<br>
-									<label>Team Name</label>
-									<select name="team" class="form-control">
-										<option>Literary</option>
-										<option>Promotion</option>
-										<option>Technical</option>
-										<option>Web Dev Team</option>
-										<option>Fine Arts</option>
-										<option>Placement</option>
-										<option>Music</option>
-										<option>Design</option>
-										<option>Public Relation</option>
-									</select>
-									<br>
-									<label>Start Date</label>
-									<input name="start" class="form-control" type="date" placeholder="Start-Date">
-									<br>
-									<label>End Date</label>
-									<input name="end" class="form-control" type="date" placeholder="End Date">
-									<br>
-									<div class="btn btn-info" data-toggle="modal" data-target="#picup">Add Photo
+									<div class="btn btn-info" data-toggle="modal" data-target="#picup"> Add Photo
 										<input style="display:none" id="picname" name="pname"> </div>
 									<br>
 									<br>
-									<textarea id="summernote" name="content">Event Details</textarea>
+									<textarea id="summernote" name="content">Write Your Content Here</textarea>
 									<br> </form>
 							</div>
 							<div class="col-md-3">
 								<div class="panel panel-info" style="max-height:800px;overflow-y:scroll">
-									<div class="panel-heading text-center">Published Events </div>
+									<div class="panel-heading text-center">Published </div>
 									<div id="update">
 										<div class="panel-body" id="live">
-											<div id="alert" class="alert alert-<?php echo $dalert;?>" aria-hidden="true" role="alert" style="position:absolute"> <span class="glyphicon glyphicon-<?php echo $dsign;?>" aria-hidden="true"></span> <span class="sr-only" style="position:relative">  <?php echo $dmsg; ?></span> </div>
+											<div id="alert" class="alert alert-<?php echo $dalert;?>" aria-hidden="true" role="alert" style="position:absolute"> <span class="glyphicon glyphicon-<?php echo $dsign;?>" aria-hidden="true"></span> <span class="sr-only" style="position:relative">  <?php echo $dmsg; ?></span></div>
 											
-										
+											<hr>
 											<ul class="list-group">
 												<?php
-                    $sql = "SELECT title,id, startd FROM event ORDER BY id ASC";
+                    $sql = "SELECT title,id FROM news ORDER BY id ASC";
                     $run = $db->query($sql);
 
                     if ($run->num_rows > 0) {
 
                         while($row = $run->fetch_assoc()) {
-                            echo"<li class='list-group-item'>".$row['title']."<br><small><br>".$row['startd']."</small><br><br><a href='?del=".$row['id']."'>Delete</a></li>";
+                            echo"<li class='list-group-item'>".$row['title']."<br><br><a href='?del=".$row['id']."'>Delete</a></li>";
                         }
 
                     }
                     else {
-                        echo "<h5 class='no_event text-center'>No  Latest Event.. Please Create One</h5>";
+                        echo "<h5 class='no_event text-center'>No  Latest News Article.. Please Create One</h5>";
                     }
 
 
@@ -265,14 +253,13 @@ else {
 				<script src="js/bootstrap.min.js"></script>
 				<script>
 					$(document).ready(function () {
-						
 						$('#summernote').summernote({
-						  height: 400,               
+							 height: 400,    
 						});
 						$("#create").click(function (e) {
 							$(this).text("Posting..Please Wait");
-							var data = $('#event').serialize();
-							$.post('functions/create_event.php', data, response);
+							var data = $('#news').serialize();
+							$.post('functions/create_news.php', data, response);
 							e.preventDefault();
 						})
 
@@ -280,8 +267,8 @@ else {
 							$('#kn').removeClass('hid');
 							$('#response').text(res);
 							$("#create").text("Post");
-							$("#event")[0].reset();
-							$("#update").load('event #live');
+							$("#news")[0].reset();
+							$("#update").load('activities #live');
 						}
 						$('.glyphicon-remove').click(function () {
 							$('#kn').addClass('hid');

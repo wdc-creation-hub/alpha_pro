@@ -1,23 +1,23 @@
-/* line 1, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 1, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 body {
   font-family: sans-serif;
   margin: 0 0 10% 0;
-  background-color: rgba(73, 164, 230, 0.62) !important; }
+  background-image: url("../../images/bg/Elegant_Background-5.jpg"); }
 
-/* line 7, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 7, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 header {
   box-shadow: 0px 2px 3px 0.2px #d91a1a;
   width: 100%;
   display: flex;
   background-color: #fff; }
 
-/* line 13, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 13, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 #logo {
   align-self: center;
   margin-left: 30%;
   margin-right: 30%; }
 
-/* line 19, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 19, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 .navigation li {
   text-align: center;
   padding-right: 24px;
@@ -26,15 +26,15 @@ header {
   display: inline-flex;
   justify-content: flex-end; }
 
-/* line 26, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 26, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 .navigation a {
   color: grey;
   text-decoration: none; }
-  /* line 29, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  /* line 29, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
   .navigation a:hover {
     color: black; }
 
-/* line 34, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 34, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 header h3 {
   font-size: 25px;
   padding: 3px;
@@ -44,7 +44,7 @@ header h3 {
   color: #d91a1a;
   line-height: 37px; }
 
-/* line 43, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 43, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 .forget {
   color: #d91a1a;
   text-align: center;
@@ -53,11 +53,11 @@ header h3 {
   margin-left: 29%;
   margin-right: 25%; }
 
-/* line 51, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 51, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 label {
   cursor: pointer; }
 
-/* line 54, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 54, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 input {
   font-size: large;
   height: 35px;
@@ -66,21 +66,21 @@ input {
   width: 100%;
   border: 0;
   border-bottom: 2px solid #222; }
-  /* line 55, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  /* line 55, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
   input[type="submit"]:hover {
     cursor: pointer; }
-  /* line 64, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  /* line 64, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
   input:focus {
     border-bottom: 2px solid #d91a1a;
     outline: none;
     color: #d91a1a; }
 
-/* line 69, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 69, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 .forget:hover {
   color: grey;
   text-decoration: blink; }
 
-/* line 73, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 73, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 .login-form {
   margin: auto;
   width: 50%;
@@ -97,12 +97,12 @@ input {
   padding: 35px;
   background-color: #fff; }
 
-/* line 89, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 89, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 .navigation ul li + li {
   margin-right: 10px;
   border-bottom: 2px solid #222; }
 
-/* line 93, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+/* line 93, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
 input[type="submit"] {
   width: 50%;
   margin-left: 25%;
@@ -112,7 +112,7 @@ input[type="submit"] {
   color: #fff;
   font-weight: 600;
   transition: background-color 0.4s ease-in-out; }
-  /* line 102, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  /* line 102, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
   input[type="submit"]:hover {
     background-color: #fff;
     color: #d91a1a;
@@ -120,13 +120,13 @@ input[type="submit"] {
     font-weight: 600; }
 
 @media screen and (max-width: 584px) {
-  /* line 109, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  /* line 109, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
   #logo {
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
     align-self: center; }
-  /* line 114, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  /* line 114, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
   .navigation li {
     width: 100%;
     clear: left;
@@ -134,7 +134,7 @@ input[type="submit"] {
     padding: 0;
     display: flex;
     align-self: center; }
-  /* line 121, C:/xampp/htdocs/creationhub/alpha_pro/admin/css/style.sass */
+  /* line 121, C:/xampp/htdocs/creationhub/alpha_pro_f/admin/css/style.sass */
   .login-form {
     border-radius: 0;
     border-top-left-radius: 25px;

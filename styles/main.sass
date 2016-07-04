@@ -1,4 +1,18 @@
 
+$color-m : #ce3030
+$color-m-o : rgba(178, 37, 37, 0.43)
+$color-d : #310a06
+$color-dd: #460e08
+$color-h : #761515 
+
+
+
+.body-c
+	position:fixed
+	width:100%
+	height:100%
+	background-color:$color-m
+	z-index:-90
 .loader 
 	position: fixed;
 	left: 0px
@@ -6,7 +20,7 @@
 	width: 100%
 	height: 100%
 	z-index:-1
-	background: url('../images/logo/logo-1.png') 50% 50% no-repeat rgb(249,249,249)
+	background: url('../images/logo/logo-1.png') 50% 50% no-repeat #fff
 	h3
 		position: fixed;
 		text-align:center
@@ -27,7 +41,7 @@
 		display:flex
 		justify-content:center
 		border-bottom:2px solid #fff
-		box-shadow:0px 1px 20px 2.2px #310a06
+		box-shadow:0px 1px 20px 2.2px $color-d
 		border-bottom-right-radius:8%
 		border-bottom-left-radius:8%
 		background-color:#fff*/
@@ -37,12 +51,12 @@
 		margin-left:auto
 		margin-right:auto
 		border-bottom:2px solid #fff
-		box-shadow:0px 1px 20px 2.2px #310a06
+		box-shadow:0px 1px 20px 2.2px $color-d
 		border-bottom-right-radius:8%
 		border-bottom-left-radius:8%
 		background-color:#fff
 		position:absolute
-		left: -40px
+		left: 0px
 		top: 0px !important
 		self-align:center
 .logo-b
@@ -52,7 +66,7 @@
 		margin-left:auto
 		margin-right:auto
 		border-bottom:2px solid #fff
-		box-shadow:0px 1px 20px 2.2px #310a06
+		box-shadow:0px 1px 20px 2.2px $color-d
 		border-bottom-right-radius:8%
 		border-bottom-left-radius:8%
 		background-color:#fff
@@ -61,11 +75,10 @@
 		top: 0px !important
 		self-align:center
 body
-	background-image:url('../images/bg/img.jpg')
+	background-image:url('../images/bg/Elegant_Background-8.jpg')
 	background-repeat:none
 	background-attachment:fixed
 	overflow-x:hidden
-	width:95%
 	margin-top:0 !important
 	margin:auto
 	z-index:-99
@@ -76,27 +89,27 @@ body
 	text-align:center
 	font-size:392px
 	position:absolute
-	left: 0px
-	top: 100px
+	left: 5px
+	top: 130px
 	z-index:-1
 	width: 100%
 	height: 100%
-	color:#fff
-	text-shadow:#460e08 16px 2px 0
+	color:#f4f4f4
+	text-shadow:$color-dd 8px 2px 0
 .cess-p
 	font-size:14px 
 	color:#fff
 	text-align:center
-	font-family: 'Josefin Sans', sans-serif
-	font-weight:600
-	text-shadow:#460e08 4px 2px 0
+	font-family: 'Josefin sans', sans-serif
+	font-weight:700
+	text-shadow:$color-dd 1px 1px 0
 					
 @media screen and (max-width:1080px)
 	.big
-		text-shadow:#460e08 10px 2px 0
+		text-shadow:$color-dd 10px 2px 0
 @media screen and (max-width:640px)
 	.big
-		text-shadow:#460e08 7px 2px 0
+		text-shadow:$color-dd 7px 2px 0
 
 .cess-nav
 	display:flex
@@ -150,7 +163,7 @@ a:hover
 	z-index:9999
 	margin:40px auto
 	color:white
-	text-shadow:#460e08 0px 2px 0
+	text-shadow:$color-dd 0px 2px 0
 	font-weight:600	
 	font-size:20px
 	text-align:center
@@ -164,16 +177,21 @@ a:hover
 	&:hover
 		text-decoration:none
 		background-color:white
-		color:#ce3030
-		border-color:#ce3030
-		text-shadow:#460e08 0px 0px 0
-		box-shadow:0px 2px 10px 2px #310a06
+		color:$color-m
+		border-color:$color-m
+		text-shadow:$color-dd 0px 0px 0
+		box-shadow:0px 2px 10px 2px $color-d
 .cess-o
-	background-color:#ce3030
+	background-color:$color-m
 	color:#fff
+	border:4px solid $color-m
+	transition:all 0.3s ease-in-out
+	&:hover
+		background-color:$color-h
+		color:white
+		border:4px solid rgba(235, 14, 14, 0.85)
+		box-shadow:none
 
-
-	
 .show
 	display:block
 	position:static
@@ -183,9 +201,9 @@ a:hover
 	position:static
 .cess-active
 		background-color:white
-		color:#ce3030
-		text-shadow:#460e08 0px 0px 0
-		box-shadow:0px 2px 10px 2px #310a06
+		color:$color-m
+		text-shadow:$color-dd 0px 0px 0
+		box-shadow:0px 2px 10px 2px $color-d
 
 .cess-nav
 	.cess-btn
@@ -203,25 +221,25 @@ a:hover
 	width:60%
 	height:auto
 	min-height:150px
-	border:2px solid #310a06
-	box-shadow:0px 2px 10px 2px #310a06
+	border:2px solid $color-d
+	box-shadow:0px 2px 10px 2px $color-d
 	margin:auto
 	background-color:#fff
-	color:#ce3030
+	color:$color-m
 	text-align:center
 
 	hr
-		background-color:#ce3030
+		background-color:$color-m
 		height:2px
 .alt-body
 	background-color:#fff
 	margin:30px 1%
-	box-shadow:0px 1px 5px 1px #310a06
+	box-shadow:0px 1px 5px 1px $color-d
 	//min-height:600px
 	border-radius:2px
 	padding:1px
 	word-wrap:break-word
-	color:#ce3030 !important
+	color:$color-m !important
 	
 	h3 
 		color:#8d2116
@@ -230,11 +248,11 @@ a:hover
 		color:#8d2116
 		font-weight:600
 	p
-		color:#ce3030
+		color:$color-m
 		text-shadow:0 0 
 		font-size:19px !important 
 .ion
-	color:#ce3030
+	color:$color-m
 	font-size:130px
 
 
@@ -252,7 +270,7 @@ a:hover
 	display:none
 .block
 	background:#fff
-	color:#ce3030
+	color:$color-m
 	text-align:center
 	display:block
 	font-size:20px
@@ -269,7 +287,7 @@ a:hover
 	height:100%
 	overflow-y:scroll
 	z-index:9999999
-	background-color:#310a06
+	background-color:rgba(34, 50, 63, 0.92)
 	.nav-item
 		color:#fff
 		font-size:30px
@@ -279,25 +297,33 @@ a:hover
 	.nav-item+.nav-item
 		border-bottom:3px solid #fff		
 		padding:15px
-.cess-footer-o
-	margin:0
-	background-color:#fff
-	color:#ce3030
-	height:auto
-	position:fixed
-	bottom:0
-	width:100%
-	font-size:18px
-	font-weight:400
+
+
 .cess-footer
-	margin:0
+	margin:auto
 	background-color:#fff
-	color:#ce3030
-	box-shadow:0px 1px 5px 1px #310a06
-	height:30px
-	width:100%
 	font-size:18px
-	font-weight:400
+	li,a
+		color:$color-m 
+	.f-bot
+		background-color:$color-m
+		
+		a
+			color:#fff
+		a:hover, a:focus
+			background-color:$color-h
+		@media screen and (min-width:768px)
+			li+li
+				border-left:2px white solid
+		@media screen and (max-width:768px)
+			li+li
+				border-top:0.5px white solid
+				
+
+.ion-ios-heart 
+  -vendor-animation-duration: 3s
+  -vendor-animation-delay: 2s
+  -vendor-animation-iteration-count: infinite
 
 .card-container
 	
@@ -338,7 +364,7 @@ a:hover
 	width:100%
 	height:100%
 	z-index:-9999
-	background-color:rgba(178, 37, 37, 0.43)
+	background-color:$color-m-o
 	.inner-lay
 		position:absolute
 		top:40%
