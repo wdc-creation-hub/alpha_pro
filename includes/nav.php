@@ -1,7 +1,7 @@
 
-<div class="row">
-	<div class="col-md-12" style="background-color:#ce3030;height:4px"></div>
-</div>
+<!--<div class="row">
+	<div class="col-md-12 container-fluid" style="background-color:#ce3030;height:4px"></div>
+</div>-->
 <div class="mob-nav toggle">
 	<span class="nav-item close-nav"><span class="ion-close pull-right"></span></span>
 	<a href="activities" class="nav-item">Activities</a>

@@ -29,7 +29,6 @@
 
 <body>
 	<div class="loader">
-		<!--<h3>Loading Awesomeness.....CESS</h3>-->
 	</div>
 	<?php include "includes/nav.php"; ?>
 <div class="alt-body">
@@ -85,13 +84,10 @@
 		</div>
 	</div>
 	</div>
-		<div class="alt-body">
+		<div class="alt-body container-fluid" style="padding:40px 50px">
 		 <div id ="useit" class="content-section-a">
-
-        <div class="container">
-			
-            <div class="row">
-			
+        	
+            <div class="row">	
 				<div class="col-sm-6 pull-right wow fadeInRight anim" style="display:flex;justify-content:center">
                     <img class="img-responsive"  src="images/logo/logo-1.png" alt="">
                 </div>
@@ -103,22 +99,20 @@
 						CESS is a body established under the Department of Computer Enginnering and Technology ,Guru Nanak Dev University,Amritsar.We here at CESS provide a platform to all the students to showcase their skills and grooming them to become all round personalities and providing them opportunities to excel in their interests.
 					</p>
 
-					 <p><a class="cess-btn cess-o" href="#" role="button">Get In Touch</a> 
-					
+					 <p><a class="cess-btn cess-o" href="#" role="button">Get In Touch</a> 		
 				</div>   
             </div>
         </div>
     
-    </div>	
-	</div>
-	<div class="alt-body">
+  
+	
 		
     <div class="content-section-b"> 
 		
-		<div class="container">
+		
             <div class="row">
                 <div class="col-sm-5 wow fadeInLeftBig anim">
-                     <img  class="img-responsive img-rounded" src="images/2.jpg" alt="">
+                     <img  class="img-responsive img-rounded" src="images/2.JPG" alt="">
 				</div>
 				
                 <div class="col-sm-offset-6 wow fadeInRightBig anim"  data-animation-delay="200">   
@@ -132,13 +126,12 @@
 					 
 				</div>  			
 			</div>
-        </div>
+       
     </div>
-	</div>
-	<div class="alt-body">
+	
 		<div class="content-section-a">
 
-        <div class="container">
+      
 
              <div class="row">
 			 
@@ -152,13 +145,13 @@
 					</p>
 					
 					<ul class="descp lead2">
-						<li><i class="glyphicon glyphicon-user"></i> Excellent Placement Record</li>
-						<li><i class="glyphicon glyphicon-refresh"></i> Started ILP program to meet the industrial standards</li>
-						<li><i class="glyphicon glyphicon-signal"></i> High speed WIFI connectivity.</li>
+						<li><i class="ion-earth"></i> Excellent Placement Record</li>
+						<li><i class="ion-university"></i> Started ILP program to meet the industrial standards</li>
+						<li><i class="ion-wifi"></i> High speed WIFI connectivity.</li>
 					</ul>
 				</div>           
             </div>
-        </div>
+        
 
 	
 	</div>

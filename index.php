@@ -48,7 +48,7 @@ $resultn = $db->query($queryn);
 			<?php include 'includes/nav-h.php'; ?>
 				<div class="wrap">
 					<div class="animated flip big anim">CESS</div>
-					<p class="wow fadeInDown cess-p" data-wow-duration="1s" data-wow-delay="0.31s">Its all about you</p>
+					<p class="wow fadeInDown cess-p" data-wow-duration="1s" data-wow-delay="0.31s">It is all about you</p>
 					<div class="cess-content animated slideInUp anim" style="width:100%; margin:30px auto">
 						<div class="grid-col grid-col--6-of-12 grid-col--centered grid-col">
 							<div class="owl-carousel owl-theme">

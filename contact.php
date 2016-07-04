@@ -115,14 +115,14 @@
 							<input type="submit" id="msgsnd" name="submit" class="submit-btn" value="Send">
 						</div>
 					</form>
-					
+					<div id="aftermsg" style="display:none">
+				<h3 class="text-center">Thankyou! Your Message Was Successfully Sent. <br> We will soon contact You </h3>
+			</div>
 					<br>
 					<br>
 				</div>
 			</div>
-			<div id="aftermsg" style="display:none">
-				<h3 class="text-center">Thankyou! Your Message Was Successfully Sent. <br> We will soon contact You </h3>
-			</div>
+			
 
 		</div>
 		<?php include 'includes/footer.php'; ?>
@@ -146,7 +146,7 @@
 		
 		function request(res) {
 			
-			 if(res===1) {
+			 if(res==1) {
 		
 			$('#contact').addClass('animated flipOutY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
 	              function() {

@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
@@ -35,7 +34,7 @@
     <link href="styles/impress-demo.css" rel="stylesheet" />
 	<style>
 		body {
-			background-image: url(images/bg/img.jpg);
+			background-image: url(images/bg/Elegant_Background-4.jpg);
 		}
 		
 		p {
@@ -46,18 +45,39 @@
   font-weight: 600;
   text-shadow: #460e08 4px 2px 0;
 		}
+		
+		.go-home {
+			position:fixed;
+			width: 100%;
+			font-size:25px;
+			color:white;
+			top:0;
+			
+			z-index:700;
+			left:0;
+		}
+		.go-home a {
+			z-index:700;
+			background-color: #716262
+		}
 	</style>
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
-<body class="impress-not-supported">
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> this webpage,  so you are presented with a simplified version.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser or check out check this in desktop browser</p>
+<body>
+	
+<div class="impress-not-supported">
+<div class="fallback-message " style="color:red">
+	
+    <p>Your browser <b>doesn't support the features required</b> by this webpage,  so you are presented with a simplified version.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser or check  this in desktop browser</p>
 </div>
 <div id="impress">
     <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-		<center><q><div> CESS </div><br><b>It's All About You</q></center>
+		<span class="go-home">
+		<center><a href="index">Go To Home</a></center>
+	</span>
+		<center><q><div> CESS </div><br><b>It is All About You</q></center>
     </div>
     <div class="step slide" data-x="0" data-y="-1500">
 	<q><b>Cess </b>is aimed at conducting events that are <strong>technical, creative as well as<br> literary </strong>which continually helps the students to brush up their skills in all fields.</q>
@@ -95,7 +115,7 @@ CESS is a body established under the Department of Computer Enginnering and Tech
 
     <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
         <p>Wanna Know More About Us?</p>
-        <q><a href="contact.html">Click Here</a>, Dude!</q>
+        <q><a href="contact">Click Here</a></q>
     </div>
 
     <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
@@ -124,7 +144,7 @@ if ("ontouchstart" in document.documentElement) {
 </script>
 <script src="scripts/impress.js"></script>
 <script>impress().init();</script>
-
+	</div>
 </body>
 </html>
 
