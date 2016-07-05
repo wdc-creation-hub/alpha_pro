@@ -12,7 +12,7 @@ $resultn = $db->query($queryn);
 		<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+		
 		<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 		<!-- Plugin CSS -->
 		<link rel="stylesheet" href="styles/animate.min.css" type="text/css">
@@ -47,8 +47,8 @@ $resultn = $db->query($queryn);
 			<div class="loader"> </div>
 			<?php include 'includes/nav-h.php'; ?>
 				<div class="wrap">
-					<div class="animated flip big anim">CESS</div>
-					<p class="wow fadeInDown cess-p" data-wow-duration="1s" data-wow-delay="0.31s">It is all about you</p>
+					<div class="animated slideInDown big">CESS</div>
+					<p class="wow rubberBand cess-p" data-wow-duration="1s" data-wow-delay="0.31s">It is all about you</p>
 					<div class="cess-content animated slideInUp anim" style="width:100%; margin:30px auto">
 						<div class="grid-col grid-col--6-of-12 grid-col--centered grid-col">
 							<div class="owl-carousel owl-theme">

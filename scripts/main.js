@@ -49,7 +49,7 @@ $(document).ready(function() {
     });
 });
 
-$('.loader').addClass('animated fadeOut');
+
 
 
 $('a[clickey]').click(function (e) {
